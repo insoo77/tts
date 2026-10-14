@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stanley Baldwin: Christian Ideals | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Stanley Baldwin: Christian Ideals</h1>
+            <h2>기독교적 이상 (キリスト教の理想)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>People often say that this is a materialistic age. There is much truth in that, but I do feel, too, that there has never been an age in which there are more people struggling, some with more success and some with less, to live to the highest ideals that are in them, and doing something to help to better the moral and the physical conditions of the people among whom they live. And it is only natural, in a time when you have active and strong the spirit that makes for good, that you have co-existent with it the spirit that makes for evil no less active and strong.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>사람들은 종종 지금이 물질주의 시대라고 말합니다. 그 말에는 많은 진실이 담겨 있지만, 저는 또한 더 많은 사람들이 성공의 정도는 각기 다를지라도 자신 안에 있는 가장 높은 이상에 따라 살기 위해, 그리고 자신이 사는 사람들 사이의 도덕적, 신체적 조건을 개선하는 데 도움을 주기 위해 분투하는 시대는 결코 없었다고 느낍니다. 그리고 선을 지향하는 정신이 활발하고 강하게 작용하는 시대에는, 악을 지향하는 정신 또한 그에 못지않게 활발하고 강하게 공존하는 것이 지극히 당연한 일입니다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>人々<rt>ひとびと</rt></ruby>はしばしば、<ruby>現代<rt>げんだい</rt></ruby>は<ruby>物質<rt>ぶっしつ</rt></ruby><ruby>主義<rt>しゅぎ</rt></ruby>の<ruby>時代<rt>じだい</rt></ruby>だと<ruby>言<rt>い</rt></ruby>います。それには<ruby>多<rt>おお</rt></ruby>くの<ruby>真実<rt>しんじつ</rt></ruby>が<ruby>含<rt>ふく</rt></ruby>まれていますが、しかし、より<ruby>多<rt>おお</rt></ruby>くの<ruby>人々<rt>ひとびと</rt></ruby>が、<ruby>成功<rt>せいこう</rt></ruby>の<ruby>度合<rt>どあ</rt></ruby>いは<ruby>様々<rt>さまざま</rt></ruby>であっても、<ruby>自分<rt>じぶん</rt></ruby>の<ruby>中<rt>なか</rt></ruby>にある<ruby>最<rt>もっと</rt></ruby>も<ruby>高<rt>たか</rt></ruby>い<ruby>理想<rt>りそう</rt></ruby>に<ruby>生<rt>い</rt></ruby>きるために、そして<ruby>自分<rt>じぶん</rt></ruby>が<ruby>住<rt>す</rt></ruby>む<ruby>人々<rt>ひとびと</rt></ruby>の<ruby>間<rt>あいだ</rt></ruby>の<ruby>道徳<rt>どうとく</rt></ruby><ruby>的<rt>てき</rt></ruby>、<ruby>身体<rt>しんたい</rt></ruby><ruby>的<rt>てき</rt></ruby><ruby>条件<rt>じょうけん</rt></ruby>を<ruby>改善<rt>かいぜん</rt></ruby>するのを<ruby>助<rt>たす</rt></ruby>けるために<ruby>奮闘<rt>ふんとう</rt></ruby>している<ruby>時代<rt>じだい</rt></ruby>はかつてなかったとも<ruby>感<rt>かん</rt></ruby>じます。そして、<ruby>善<rt>ぜん</rt></ruby>をもたらす<ruby>精神<rt>せいしん</rt></ruby>が<ruby>活発<rt>かっぱつ</rt></ruby>で<ruby>強力<rt>きょうりょく</rt></ruby>である<ruby>時代<rt>じだい</rt></ruby>には、<ruby>悪<rt>あく</rt></ruby>をもたらす<ruby>精神<rt>せいしん</rt></ruby>もそれに<ruby>劣<rt>おと</rt></ruby>らず<ruby>活発<rt>かっぱつ</rt></ruby>で<ruby>強力<rt>きょうりょく</rt></ruby>に<ruby>共存<rt>きょうぞん</rt></ruby>するのは、ごく<ruby>自然<rt>しぜん</rt></ruby>なことです。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Orwell: Animal Farm | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>George Orwell: Animal Farm</h1>
+            <h2>동물농장 (動物農場)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>I have little more to say. I merely repeat, remember always your duty of enmity towards Man and all his ways. Whatever goes upon two legs is an enemy. Whatever goes upon four legs, or has wings, is a friend. And remember also that in fighting against Man, we must not come to resemble him. Even when you have conquered him, do not adopt his vices. No animal must ever live in a house, or sleep in a bed, or wear clothes, or drink alcohol, or smoke tobacco, or touch money or engage in trade. All the habits of Man are evil. And, above all, no animal must ever tyrannize over his own kind. Weak or strong, clever or simple, we are all brothers. No animal must ever kill any other animal. All animals are equal.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>제가 더 할 말은 거의 없습니다. 저는 단지 반복할 뿐입니다. 인간과 그의 모든 방식에 대한 적개심의 의무를 항상 기억하십시오. 두 발로 걷는 것은 무엇이든 적입니다. 네 발로 걷거나 날개가 있는 것은 무엇이든 친구입니다. 그리고 인간에 맞서 싸울 때, 우리는 그를 닮아서는 안 된다는 것도 기억하십시오. 그를 정복했을 때에도, 그의 악습을 받아들이지 마십시오. 어떤 동물도 절대로 집에서 살거나, 침대에서 자거나, 옷을 입거나, 술을 마시거나, 담배를 피우거나, 돈을 만지거나, 거래에 관여해서는 안 됩니다. 인간의 모든 습관은 악합니다. 그리고 무엇보다도, 어떤 동물도 절대로 자기 동족을 압제해서는 안 됩니다. 약하든 강하든, 영리하든 단순하든, 우리는 모두 형제입니다. 어떤 동물도 절대로 다른 동물을 죽여서는 안 됩니다. 모든 동물은 평등합니다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>私<rt>わたし</rt></ruby>にはもうほとんど<ruby>話<rt>はな</rt></ruby>すことはない。<ruby>私<rt>わたし</rt></ruby>はただ<ruby>繰<rt>く</rt></ruby>り<ruby>返<rt>かえ</rt></ruby>すだけだ。<ruby>人間<rt>にんげん</rt></ruby>とそのすべてのやり<ruby>方<rt>かた</rt></ruby>に<ruby>対<rt>たい</rt></ruby>する<ruby>敵意<rt>てきい</rt></ruby>の<ruby>義務<rt>ぎむ</rt></ruby>を<ruby>常<rt>つね</rt></ruby>に<ruby>忘<rt>わす</rt></ruby>れるな。<ruby>二<rt>に</rt></ruby><ruby>本<rt>ほん</rt></ruby>の<ruby>脚<rt>あし</rt></ruby>で<ruby>歩<rt>ある</rt></ruby>くものはすべて<ruby>敵<rt>てき</rt></ruby>である。<ruby>四<rt>よん</rt></ruby><ruby>本<rt>ほん</rt></ruby>の<ruby>脚<rt>あし</rt></ruby>で<ruby>歩<rt>ある</rt></ruby>くもの、あるいは<ruby>翼<rt>つばさ</rt></ruby>を<ruby>持<rt>も</rt></ruby>つものは<ruby>味方<rt>みかた</rt></ruby>である。そして、<ruby>人間<rt>にんげん</rt></ruby>と<ruby>戦<rt>たたか</rt></ruby>うにあたって、<ruby>我々<rt>われわれ</rt></ruby>は<ruby>彼<rt>かれ</rt></ruby>に<ruby>似<rt>に</rt></ruby>てはならないことも<ruby>忘<rt>わす</rt></ruby>れるな。<ruby>彼<rt>かれ</rt></ruby>を<ruby>征服<rt>せいふく</rt></ruby>した<ruby>後<rt>あと</rt></ruby>でさえ、<ruby>彼<rt>かれ</rt></ruby>の<ruby>悪徳<rt>あくとく</rt></ruby>を<ruby>取<rt>と</rt></ruby>り<ruby>入<rt>い</rt></ruby>れてはならない。<ruby>いかなる<rt>いかなる</rt></ruby><ruby>動物<rt>どうぶつ</rt></ruby>も、<ruby>決<rt>けっ</rt></ruby>して<ruby>家<rt>いえ</rt></ruby>に<ruby>住<rt>す</rt></ruby>んだり、ベッドで<ruby>寝<rt>ね</rt></ruby>たり、<ruby>服<rt>ふく</rt></ruby>を<ruby>着<rt>き</rt></ruby>たり、アルコールを<ruby>飲<rt>の</rt></ruby>んだり、タバコを<ruby>吸<rt>す</rt></ruby>ったり、お<ruby>金<rt>かね</rt></ruby>に<ruby>触<rt>ふ</rt></ruby>れたり、<ruby>商売<rt>しょうばい</rt></ruby>に<ruby>従事<rt>じゅうじ</rt></ruby>したりしてはならない。<ruby>人間<rt>にんげん</rt></ruby>の<ruby>習慣<rt>しゅうかん</rt></ruby>はすべて<ruby>悪<rt>あく</rt></ruby>である。そして、<ruby>何<rt>なに</rt></ruby>よりも、<ruby>いかなる<rt>いかなる</rt></ruby><ruby>動物<rt>どうぶつ</rt></ruby>も<ruby>決<rt>けっ</rt></ruby>して<ruby>自分<rt>じぶん</rt></ruby>の<ruby>仲間<rt>なかま</rt></ruby>を<ruby>圧制<rt>あっせい</rt></ruby>してはならない。<ruby>弱<rt>よわ</rt></ruby>くとも<ruby>強<rt>つよ</rt></ruby>くとも、<ruby>賢<rt>かしこ</rt></ruby>くとも<ruby>単純<rt>たんじゅん</rt></ruby>であっても、<ruby>我々<rt>われわれ</rt></ruby>はみな<ruby>兄弟<rt>きょうだい</rt></ruby>だ。<ruby>いかなる<rt>いかなる</rt></ruby><ruby>動物<rt>どうぶつ</rt></ruby>も<ruby>決<rt>けっ</rt></ruby>して<ruby>他<rt>ほか</rt></ruby>の<ruby>動物<rt>どうぶつ</rt></ruby>を<ruby>殺<rt>ころ</rt></ruby>してはならない。すべての<ruby>動物<rt>どうぶつ</rt></ruby>は<ruby>平等<rt>びょうどう</rt></ruby>である。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

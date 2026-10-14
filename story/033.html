@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William H. Hudson: Among the Birds | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>William H. Hudson: Among the Birds</h1>
+            <h2>새들 사이에서 (鳥たちの中で)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>The indifference to bird music is the result of a town life and the dulling effect on the sense of hearing of an atmosphere of loud harsh noises, also of the loudness of the instrumental music to which we are accustomed. Our civilization is a noisy one, and as it increases in noisiness, the smaller, more delicate musical instruments which must be heard in a quiet atmosphere lose their ancient charm and finally become out of date.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>새의 노랫소리에 대한 무관심은 도시 생활의 결과이며, 시끄럽고 거친 소음의 분위기가 청각에 미치는 둔화시키는 효과 때문이고, 또한 우리가 익숙해진 기악의 큰 소리 때문이기도 하다. 우리의 문명은 시끄러운 문명이며, 그 시끄러움이 증가함에 따라, 조용한 분위기에서 들어야 하는 더 작고 더 섬세한 악기들은 그들의 오래된 매력을 잃고 마침내 구식이 되어버린다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>鳥<rt>とり</rt></ruby>の<ruby>音楽<rt>おんがく</rt></ruby>への<ruby>無関心<rt>むかんしん</rt></ruby>は、<ruby>都会<rt>とかい</rt></ruby><ruby>生活<rt>せいかつ</rt></ruby>の<ruby>結果<rt>けっか</rt></ruby>であり、<ruby>騒々<rt>そうぞう</rt></ruby>しく<ruby>耳障<rt>みみざわ</rt></ruby>りな<ruby>騒音<rt>そうおん</rt></ruby>の<ruby>雰囲気<rt>ふんいき</rt></ruby>が<ruby>聴覚<rt>ちょうかく</rt></ruby>に<ruby>与<rt>あた</rt></ruby>える<ruby>鈍化<rt>どんか</rt></ruby><ruby>効果<rt>こうか</rt></ruby>、さらには<ruby>私<rt>わたし</rt></ruby>たちが<ruby>慣<rt>な</rt></ruby>れ<ruby>親<rt>した</rt></ruby>しんでいる<ruby>器楽<rt>きがく</rt></ruby>の<ruby>音量<rt>おんりょう</rt></ruby>の<ruby>大<rt>おお</rt></ruby>きさの<ruby>結果<rt>けっか</rt></ruby>でもある。<ruby>私<rt>わたし</rt></ruby>たちの<ruby>文明<rt>ぶんめい</rt></ruby>は<ruby>騒々<rt>そうぞう</rt></ruby>しいものであり、その<ruby>騒<rt>さわ</rt></ruby>がしさが<ruby>増<rt>ま</rt></ruby>すにつれて、<ruby>静<rt>しず</rt></ruby>かな<ruby>雰囲気<rt>ふんいき</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で<ruby>聴<rt>き</rt></ruby>かれなければならない、より<ruby>小<rt>ちい</rt></ruby>さく、より<ruby>繊細<rt>せんさい</rt></ruby>な<ruby>楽器<rt>がっき</rt></ruby>は、その<ruby>古来<rt>こらい</rt></ruby>の<ruby>魅力<rt>みりょく</rt></ruby>を<ruby>失<rt>うしな</rt></ruby>い、<ruby>最終的<rt>さいしゅうてき</rt></ruby>に<ruby>時代遅<rt>じだいおく</rt></ruby>れになってしまう。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

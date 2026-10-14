@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bertrand Russell: Boredom and Excitement | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Bertrand Russell: Boredom and Excitement</h1>
+            <h2>권태와 흥분 (退屈と興奮)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>Darwin, after going round the world, spent the whole of the rest of his life in his own house. Marx, after stirring up a few revolutions, decided to spend the remainder of his days in the British Museum. Altogether it will be found that a quiet life is characteristic of great men and that their pleasures have not been of the sort that would look exciting to the outward eye. No great achievement is possible without persistent work, so absorbing and so difficult that little energy is left over for the more strenuous kinds of amusement.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>다윈은 세계를 일주한 후 남은 평생을 자신의 집에서 보냈다. 마르크스는 몇 차례의 혁명을 일으킨 후 남은 생애를 대영박물관에서 보내기로 결심했다. 대체로 조용한 삶은 위인들의 특징이며, 그들의 즐거움은 외견상 흥미진진해 보이는 종류의 것이 아니었음을 알게 될 것이다. 끈기 있는 노력 없이는 어떠한 위대한 성취도 불가능한데, 그 일은 너무나 몰입해야 하고 어려워서 더 격렬한 종류의 오락을 즐길 에너지가 거의 남아있지 않게 된다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p>ダーウィンは、<ruby>世界<rt>せかい</rt></ruby>を<ruby>一周<rt>いっしゅう</rt></ruby>した<ruby>後<rt>あと</rt></ruby>、その<ruby>残<rt>のこ</rt></ruby>りの<ruby>生涯<rt>しょうがい</rt></ruby>を<ruby>自身<rt>じしん</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>で<ruby>過<rt>す</rt></ruby>ごした。マルクスは、いくつかの<ruby>革命<rt>かくめい</rt></ruby>を<ruby>引<rt>ひ</rt></ruby>き<ruby>起<rt>お</rt></ruby>こした<ruby>後<rt>あと</rt></ruby>、その<ruby>余生<rt>よせい</rt></ruby>を<ruby>大英<rt>たいえい</rt></ruby><ruby>博物館<rt>はくぶつかん</rt></ruby>で<ruby>過<rt>す</rt></ruby>ごすことに<ruby>決<rt>き</rt></ruby>めた。<ruby>総<rt>そう</rt></ruby>じて、<ruby>静<rt>しず</rt></ruby>かな<ruby>生活<rt>せいかつ</rt></ruby>は<ruby>偉人<rt>いじん</rt></ruby>たちの<ruby>特徴<rt>とくちょう</rt></ruby>であり、<ruby>彼<rt>かれ</rt></ruby>らの<ruby>楽<rt>たの</rt></ruby>しみは<ruby>外部<rt>がいぶ</rt></ruby>の<ruby>目<rt>め</rt></ruby>には<ruby>刺激<rt>しげき</rt></ruby><ruby>的<rt>てき</rt></ruby>に<ruby>見<rt>み</rt></ruby>えるような<ruby>種類<rt>しゅるい</rt></ruby>のものではなかったことがわかるだろう。<ruby>偉大<rt>いだい</rt></ruby>な<ruby>達成<rt>たっせい</rt></ruby>は、<ruby>持続<rt>じぞく</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>労働<rt>ろうどう</rt></ruby>なしには<ruby>不可能<rt>ふかのう</rt></ruby>であり、その<ruby>仕事<rt>しごと</rt></ruby>はあまりにも<ruby>夢中<rt>むちゅう</rt></ruby>にさせられ、かつ<ruby>困難<rt>こんなん</rt></ruby>であるため、より<ruby>激<rt>はげ</rt></ruby>しい<ruby>種類<rt>しゅるい</rt></ruby>の<ruby>娯楽<rt>ごらく</rt></ruby>に<ruby>残<rt>のこ</rt></ruby>されるエネルギーはほとんどない。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfred G. Gardiner: Leaves in the Wind | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Alfred G. Gardiner: Leaves in the Wind</h1>
+            <h2>바람 속의 나뭇잎 (風の中の木の葉)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>A stout old lady was walking with her basket down the middle of a street in Petrograd to the great confusion of the traffic and with no small peril to herself. It was pointed out to her that the pavement was the place for foot-passengers, but she replied: “I'm going to walk where I like. We've got liberty now.” It did not occur to the dear old lady that if liberty entitled the foot-passengers to walk down the middle of the road it also entitled the cabdriver to drive on the pavement, and that the end of such liberty would be universal chaos. Everybody would be getting in everybody else's way and nobody would get anywhere. Individual liberty would have become social anarchy.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>뚱뚱한 노부인이 페트로그라드의 한 거리 한복판에서 바구니를 들고 걷고 있었는데, 이는 교통에 큰 혼란을 야기하고 그녀 자신에게도 적지 않은 위험을 초래했다. 인도가 보행자를 위한 곳이라고 지적받았지만, 그녀는 "나는 내가 걷고 싶은 곳을 걸을 거예요. 우리에겐 이제 자유가 있으니까요."라고 대답했다. 만약 자유가 보행자에게 도로 한복판을 걸을 권리를 준다면, 그것은 또한 마부에게 인도로 마차를 몰 권리를 준다는 것과, 그러한 자유의 끝은 전면적인 혼돈일 것이라는 점을 그 상냥한 노부인은 미처 생각하지 못했다. 모든 사람이 다른 사람의 길을 막게 될 것이고 아무도 아무 데도 갈 수 없을 것이다. 개인의 자유는 사회적 무정부 상태가 되었을 것이다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>太<rt>ふと</rt></ruby>った<ruby>老婦人<rt>ろうふじん</rt></ruby>がペトログラードの<ruby>街<rt>まち</rt></ruby>の<ruby>真<rt>ま</rt></ruby>ん<ruby>中<rt>なか</rt></ruby>を<ruby>籠<rt>かご</rt></ruby>を<ruby>手<rt>て</rt></ruby>に<ruby>歩<rt>ある</rt></ruby>いており、<ruby>交通<rt>こうつう</rt></ruby>を<ruby>大<rt>おお</rt></ruby>いに<ruby>混乱<rt>こんらん</rt></ruby>させ、<ruby>自身<rt>じしん</rt></ruby>にも<ruby>少<rt>すく</rt></ruby>なからず<ruby>危険<rt>きけん</rt></ruby>をもたらしていた。<ruby>歩道<rt>ほどう</rt></ruby>が<ruby>歩行者<rt>ほこうしゃ</rt></ruby>のための<ruby>場所<rt>ばしょ</rt></ruby>だと<ruby>指摘<rt>してき</rt></ruby>されたが、<ruby>彼女<rt>かのじょ</rt></ruby>は「<ruby>私<rt>わたし</rt></ruby>は<ruby>好<rt>す</rt></ruby>きな<ruby>所<rt>ところ</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>くつもりです。<ruby>私<rt>わたし</rt></ruby>たちには<ruby>今<rt>いま</rt></ruby>、<ruby>自由<rt>じゆう</rt></ruby>があるのですから」と<ruby>答<rt>こた</rt></ruby>えた。もし<ruby>自由<rt>じゆう</rt></ruby>が<ruby>歩行者<rt>ほこうしゃ</rt></ruby>に<ruby>車道<rt>しゃどう</rt></ruby>の<ruby>真<rt>ま</rt></ruby>ん<ruby>中<rt>なか</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>く<ruby>権利<rt>けんり</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えるなら、それはまた<ruby>御者<rt>ぎょしゃ</rt></ruby>に<ruby>歩道<rt>ほどう</rt></ruby>を<ruby>走<rt>はし</rt></ruby>る<ruby>権利<rt>けんり</rt></ruby>をも<ruby>与<rt>あた</rt></ruby>えること、そしてそのような<ruby>自由<rt>じゆう</rt></ruby>の<ruby>結末<rt>けつまつ</rt></ruby>は<ruby>普遍<rt>ふへん</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>混沌<rt>こんとん</rt></ruby>であろうということが、その<ruby>心優<rt>こころやさ</rt></ruby>しき<ruby>老婦人<rt>ろうふじん</rt></ruby>には<ruby>思<rt>おも</rt></ruby>い<ruby>浮<rt>う</rt></ruby>かばなかったのである。<ruby>誰<rt>だれ</rt></ruby>もが<ruby>他人<rt>たにん</rt></ruby>の<ruby>邪魔<rt>じゃま</rt></ruby>をし、<ruby>誰<rt>だれ</rt></ruby>もどこへも<ruby>行<rt>い</rt></ruby>けなくなるだろう。<ruby>個人<rt>こじん</rt></ruby>の<ruby>自由<rt>じゆう</rt></ruby>は<ruby>社会<rt>しゃかい</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>無政府<rt>むせいふ</rt></ruby><ruby>状態<rt>じょうたい</rt></ruby>と<ruby>化<rt>か</rt></ruby>してしまったであろう。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R. L. Stevenson: Virginibus Puerisque | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>R. L. Stevenson: Virginibus Puerisque</h1>
+            <h2>처녀와 소년들을 위하여 (乙女と若者のために)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>So, in one way or another, life forces men apart and breaks up the goodly fellowships for ever. The flexibility and ease which make men's friendships so agreeable while they endure, make them the easier to destroy and forget. And a man who has a few friends, or one who has a dozen, cannot forget on how precarious a base his happiness reposes; and how by a stroke or two of fate—a death, a few light words, a piece of stamped paper, a woman's bright eyes—he may be left, in a month, destitute of all.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>그리하여 이런저런 방식으로 삶은 사람들을 갈라놓고 좋은 교우 관계를 영원히 깨뜨려 버린다. 우정이 지속되는 동안 그것을 그토록 유쾌하게 만드는 유연함과 편안함이, 역설적으로 그것을 파괴하고 잊기 더 쉽게 만든다. 그리고 친구가 몇 명 있든, 혹은 열두 명 있든, 사람은 자신의 행복이 얼마나 위태로운 기반 위에 놓여 있는지를 잊을 수 없다. 그리고 운명의 한두 번의 일격—죽음, 몇 마디 가벼운 말, 도장이 찍힌 종이 한 장, 여인의 빛나는 눈동자—에 의해 한 달 만에 모든 것을 잃게 될 수도 있다는 사실을 말이다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p>かくして、<ruby>何<rt>なに</rt></ruby>らかの<ruby>形<rt>かたち</rt></ruby>で、<ruby>人生<rt>じんせい</rt></ruby>は<ruby>人々<rt>ひとびと</rt></ruby>を<ruby>引<rt>ひ</rt></ruby>き<ruby>裂<rt>さ</rt></ruby>き、<ruby>良<rt>よ</rt></ruby>き<ruby>交友<rt>こうゆう</rt></ruby><ruby>関係<rt>かんけい</rt></ruby>を<ruby>永遠<rt>えいえん</rt></ruby>に<ruby>断<rt>た</rt></ruby>ち<ruby>切<rt>き</rt></ruby>ってしまう。<ruby>男<rt>おとこ</rt></ruby>たちの<ruby>友情<rt>ゆうじょう</rt></ruby>が<ruby>続<rt>つづ</rt></ruby>く<ruby>間<rt>あいだ</rt></ruby>、それを<ruby>心地<rt>ここち</rt></ruby>よいものにしている<ruby>柔軟<rt>じゅうなん</rt></ruby><ruby>性<rt>せい</rt></ruby>と<ruby>安楽<rt>あんらく</rt></ruby>さが、<ruby>逆説<rt>ぎゃくせつ</rt></ruby><ruby>的<rt>てき</rt></ruby>にそれを<ruby>破壊<rt>はかい</rt></ruby>し<ruby>忘<rt>わす</rt></ruby>れやすくもするのである。<ruby>友人<rt>ゆうじん</rt></ruby>が<ruby>数人<rt>すうにん</rt></ruby>いる<ruby>男<rt>おとこ</rt></ruby>も、あるいは<ruby>十<rt>じゅう</rt></ruby><ruby>二<rt>に</rt></ruby><ruby>人<rt>にん</rt></ruby>いる<ruby>男<rt>おとこ</rt></ruby>も、<ruby>自分<rt>じぶん</rt></ruby>の<ruby>幸福<rt>こうふく</rt></ruby>がいかに<ruby>不安定<rt>ふあんてい</rt></ruby>な<ruby>基盤<rt>きばん</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>に<ruby>成<rt>な</rt></ruby>り<ruby>立<rt>た</rt></ruby>っているかを<ruby>忘<rt>わす</rt></ruby>れることはできない。そして、<ruby>運命<rt>うんめい</rt></ruby>の<ruby>一<rt>ひと</rt></ruby>つや<ruby>二<rt>ふた</rt></ruby>つの<ruby>打撃<rt>だげき</rt></ruby>—<ruby>一<rt>ひと</rt></ruby>つの<ruby>死<rt>し</rt></ruby>、いくつかの<ruby>軽<rt>かる</rt></ruby>い<ruby>言葉<rt>ことば</rt></ruby>、<ruby>印<rt>いん</rt></ruby>の<ruby>押<rt>お</rt></ruby>された<ruby>一枚<rt>いちまい</rt></ruby>の<ruby>紙<rt>かみ</rt></ruby>、<ruby>女性<rt>じょせい</rt></ruby>の<ruby>輝<rt>かがや</rt></ruby>く<ruby>瞳<rt>ひとみ</rt></ruby>—によって、<ruby>一月<rt>ひとつき</rt></ruby>もすれば、すべてのものを<ruby>失<rt>うしな</rt></ruby>ってしまうかもしれないということを。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

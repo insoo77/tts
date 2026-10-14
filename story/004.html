@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John B. Priestley: Rain upon Godshill | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>John B. Priestley: Rain upon Godshill</h1>
+            <h2>가즈힐에 내리는 비 (ゴッドシルに降る雨)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>We should behave towards our country as women behave towards the men they love. A loving wife will do anything for her husband, never weary of criticizing and trying to improve him. That is the right attitude for a citizen. We should cast the same affectionate but sharp glance at our country. We should love it, but also insist upon telling it all its faults. The dangerous man is not the critic, but the noisy empty "patriot" who encourages us to indulge in orgies of self-congratulation.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>우리는 여성이 사랑하는 남성을 대하듯 우리 나라를 대해야 한다. 사랑하는 아내는 남편을 위해 무엇이든 할 것이며, 그를 비판하고 개선하려는 노력을 결코 지겨워하지 않는다. 그것이 시민으로서의 올바른 태도이다. 우리는 우리나라에도 똑같이 애정 어리지만 날카로운 시선을 던져야 한다. 우리는 나라를 사랑해야 하지만, 또한 그 모든 결점을 말해주기를 고집해야 한다. 위험한 인물은 비평가가 아니라, 우리에게 자기만족의 향연에 빠지도록 부추기는 시끄럽고 공허한 '애국자'이다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>我々<rt>われわれ</rt></ruby>は、<ruby>女性<rt>じょせい</rt></ruby>が<ruby>愛<rt>あい</rt></ruby>する<ruby>男性<rt>だんせい</rt></ruby>に<ruby>対<rt>たい</rt></ruby>して<ruby>振<rt>ふ</rt></ruby>る<ruby>舞<rt>ま</rt></ruby>うように、<ruby>我々<rt>われわれ</rt></ruby>の<ruby>国<rt>くに</rt></ruby>に<ruby>対<rt>たい</rt></ruby>して<ruby>振<rt>ふ</rt></ruby>る<ruby>舞<rt>ま</rt></ruby>うべきである。<ruby>愛情<rt>あいじょう</rt></ruby><ruby>深<rt>ぶか</rt></ruby>い<ruby>妻<rt>つま</rt></ruby>は<ruby>夫<rt>おっと</rt></ruby>のために<ruby>何<rt>なん</rt></ruby>でもし、<ruby>彼<rt>かれ</rt></ruby>を<ruby>批判<rt>ひはん</rt></ruby>し<ruby>改善<rt>かいぜん</rt></ruby>しようと<ruby>試<rt>こころ</rt></ruby>みることに<ruby>決<rt>けっ</rt></ruby>して<ruby>飽<rt>あ</rt></ruby>きない。それが<ruby>市民<rt>しみん</rt></ruby>としての<ruby>正<rt>ただ</rt></ruby>しい<ruby>態度<rt>たいど</rt></ruby>である。<ruby>我々<rt>われわれ</rt></ruby>は<ruby>我々<rt>われわれ</rt></ruby>の<ruby>国<rt>くに</rt></ruby>にも<ruby>同<rt>おな</rt></ruby>じように<ruby>愛情<rt>あいじょう</rt></ruby><ruby>深<rt>ぶか</rt></ruby>いが<ruby>鋭<rt>するど</rt></ruby>い<ruby>視線<rt>しせん</rt></ruby>を<ruby>投<rt>な</rt></ruby>げかけるべきだ。<ruby>我々<rt>われわれ</rt></ruby>は<ruby>国<rt>くに</rt></ruby>を<ruby>愛<rt>あい</rt></ruby>すべきだが、そのすべての<ruby>欠点<rt>けってん</rt></ruby>を<ruby>伝<rt>つた</rt></ruby>え<ruby>続<rt>つづ</rt></ruby>けることをも<ruby>主張<rt>しゅちょう</rt></ruby>しなければならない。<ruby>危険<rt>きけん</rt></ruby>な<ruby>人物<rt>じんぶつ</rt></ruby>とは<ruby>批評家<rt>ひひょうか</rt></ruby>ではなく、<ruby>我々<rt>われわれ</rt></ruby>に<ruby>自己<rt>じこ</rt></ruby><ruby>満足<rt>まんぞく</rt></ruby>の<ruby>饗宴<rt>きょうえん</rt></ruby>にふけるよう<ruby>奨励<rt>しょうれい</rt></ruby>する、<ruby>騒<rt>さわ</rt></ruby>がしく<ruby>空虚<rt>くうきょ</rt></ruby>な「<ruby>愛国者<rt>あいこくしゃ</rt></ruby>」なのである。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

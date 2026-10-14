@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Stuart Mill: On Liberty | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>John Stuart Mill: On Liberty</h1>
+            <h2>자유론 (自由論)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>It is the irony of history that whenever the common people have after a long struggle obtained the power they have been striving for, they forthwith proceed to hand it over, in fact if not in form, to “strong men,” public favorites who have for one reason or another attracted public support. Often the people instinctively choose the right man, sometimes, unfortunately, their choice is determined by emotional tests unrelated to the hero's capacity for ruling, and they find too late that they have picked the wrong man and now cannot get rid of him as easily as they adopted him.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>역사의 아이러니는, 평범한 사람들이 오랜 투쟁 끝에 그토록 갈망하던 권력을 얻게 될 때마다, 그들은 즉시 그 권력을 형식은 아닐지라도 사실상 '강한 자들', 즉 이런저런 이유로 대중의 지지를 얻은 인기 있는 인물들에게 넘겨준다는 것이다. 종종 사람들은 본능적으로 올바른 사람을 선택하지만, 불행하게도 때로는 그들의 선택이 영웅의 통치 능력과는 무관한 감정적인 시험에 의해 결정되기도 한다. 그리고 그들은 너무 늦게서야 자신들이 잘못된 사람을 선택했으며, 그를 받아들였을 때만큼 쉽게 그에게서 벗어날 수 없다는 것을 깨닫게 된다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>歴史<rt>れきし</rt></ruby>の<ruby>皮肉<rt>ひにく</rt></ruby>は、<ruby>一般<rt>いっぱん</rt></ruby>の<ruby>人々<rt>ひとびと</rt></ruby>が<ruby>長<rt>なが</rt></ruby>い<ruby>闘争<rt>とうそう</rt></ruby>の<ruby>末<rt>すえ</rt></ruby>に<ruby>求<rt>もと</rt></ruby>め<ruby>続<rt>つづ</rt></ruby>けてきた<ruby>権力<rt>けんりょく</rt></ruby>を<ruby>手<rt>て</rt></ruby>に<ruby>入<rt>い</rt></ruby>れるたびに、<ruby>形式<rt>けいしき</rt></ruby>はともかく<ruby>事実上<rt>じじつじょう</rt></ruby>、それを「<ruby>強<rt>つよ</rt></ruby>い<ruby>男<rt>おとこ</rt></ruby>たち」、すなわち<ruby>何<rt>なに</rt></ruby>らかの<ruby>理由<rt>りゆう</rt></ruby>で<ruby>公衆<rt>こうしゅう</rt></ruby>の<ruby>支持<rt>しじ</rt></ruby>を<ruby>集<rt>あつ</rt></ruby>めた<ruby>人気<rt>にんき</rt></ruby>のある<ruby>人物<rt>じんぶつ</rt></ruby>たちにすぐに<ruby>渡<rt>わた</rt></ruby>してしまうことである。<ruby>多<rt>おお</rt></ruby>くの<ruby>場合<rt>ばあい</rt></ruby>、<ruby>人々<rt>ひとびと</rt></ruby>は<ruby>本能<rt>ほんのう</rt></ruby><ruby>的<rt>てき</rt></ruby>に<ruby>正<rt>ただ</rt></ruby>しい<ruby>人物<rt>じんぶつ</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぶが、<ruby>時<rt>とき</rt></ruby>には<ruby>不運<rt>ふうん</rt></ruby>にも、その<ruby>選択<rt>せんたく</rt></ruby>が<ruby>英雄<rt>えいゆう</rt></ruby>の<ruby>統治<rt>とうち</rt></ruby><ruby>能力<rt>のうりょく</rt></ruby>とは<ruby>無関係<rt>むかんけい</rt></ruby>な<ruby>感情<rt>かんじょう</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>試練<rt>しれん</rt></ruby>によって<ruby>決定<rt>けってい</rt></ruby>されることもある。そして、<ruby>間違<rt>まちが</rt></ruby>った<ruby>人物<rt>じんぶつ</rt></ruby>を<ruby>選<rt>えら</rt></ruby>んでしまい、<ruby>彼<rt>かれ</rt></ruby>を<ruby>受<rt>う</rt></ruby>け<ruby>入<rt>い</rt></ruby>れたときほど<ruby>簡単<rt>かんたん</rt></ruby>には<ruby>彼<rt>かれ</rt></ruby>から<ruby>逃<rt>のが</rt></ruby>れることができないと<ruby>気<rt>き</rt></ruby>づくのは、あまりにも<ruby>遅<rt>おそ</rt></ruby>すぎるのである。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

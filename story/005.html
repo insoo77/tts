@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D. H. Lawrence: Selected Essays | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>D. H. Lawrence: Selected Essays</h1>
+            <h2>에세이 선집 (随筆選)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>Literary criticism can be no more than a reasoned account of the feeling produced upon the critic by the book he is criticizing. Criticism can never be a science: it is, in the first place, much too personal, and in the second, it is concerned with values that science ignores. The touchstone is emotion, not reason. We judge a work of art by its effect on our sincere and vital emotion, and nothing else.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>문학 비평은 비평가가 비평하고 있는 책에 의해 그에게 생성된 감정에 대한 이성적인 설명에 지나지 않을 수 있다. 비평은 결코 과학이 될 수 없다. 첫째로, 그것은 너무나 개인적이며, 둘째로, 과학이 무시하는 가치들과 관련이 있기 때문이다. 시금석은 이성이 아니라 감정이다. 우리는 예술 작품을 우리의 진실하고 생생한 감정에 미치는 영향으로 판단하며, 그 외에는 아무것도 없다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>文学<rt>ぶんがく</rt></ruby><ruby>批評<rt>ひひょう</rt></ruby>は、<ruby>批評家<rt>ひひょうか</rt></ruby>が<ruby>批評<rt>ひひょう</rt></ruby>している<ruby>本<rt>ほん</rt></ruby>によってその<ruby>批評家<rt>ひひょうか</rt></ruby>にもたらされる<ruby>感情<rt>かんじょう</rt></ruby>についての<ruby>理性<rt>りせい</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>説明<rt>せつめい</rt></ruby><ruby>以上<rt>いじょう</rt></ruby>のものではあり<ruby>得<rt>え</rt></ruby>ない。<ruby>批評<rt>ひひょう</rt></ruby>は<ruby>決<rt>けっ</rt></ruby>して<ruby>科学<rt>かがく</rt></ruby>にはなり<ruby>得<rt>え</rt></ruby>ない。それは、<ruby>第一<rt>だいいち</rt></ruby>に、あまりにも<ruby>個人<rt>こじん</rt></ruby><ruby>的<rt>てき</rt></ruby>であり、<ruby>第二<rt>だいに</rt></ruby>に、<ruby>科学<rt>かがく</rt></ruby>が<ruby>無視<rt>むし</rt></ruby>する<ruby>価値観<rt>かちかん</rt></ruby>に<ruby>関<rt>かか</rt></ruby>わっているからである。<ruby>試金石<rt>しきんせき</rt></ruby>は<ruby>理性<rt>りせい</rt></ruby>ではなく、<ruby>感情<rt>かんじょう</rt></ruby>である。<ruby>我々<rt>われわれ</rt></ruby>は<ruby>芸術<rt>げいじゅつ</rt></ruby><ruby>作品<rt>さくひん</rt></ruby>を、<ruby>我々<rt>われわれ</rt></ruby>の<ruby>誠実<rt>せいじつ</rt></ruby>で<ruby>生<rt>い</rt></ruby>き<ruby>生<rt>い</rt></ruby>きとした<ruby>感情<rt>かんじょう</rt></ruby>に<ruby>与<rt>あた</rt></ruby>える<ruby>影響<rt>えいきょう</rt></ruby>によって<ruby>判断<rt>はんだん</rt></ruby>するのであり、それ<ruby>以外<rt>いがい</rt></ruby>の<ruby>何物<rt>なにもの</rt></ruby>でもない。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

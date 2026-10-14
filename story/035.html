@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ernest Hemingway: A Farewell to Arms | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Ernest Hemingway: A Farewell to Arms</h1>
+            <h2>무기여 잘 있거라 (武器よさらば)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>In the late summer of that year we lived in a house in the village that looked across the river and the plain to the mountains. In the bed of the river there were pebbles and boulders, dry and white in the sun, and the water was clear and swiftly moving and blue in the channels. Troops went by the house and down the road and the dust they raised powdered the leaves of the trees. The trunks of the trees too were dusty and the leaves fell early that year and we saw the troops marching along the road and the dust rising and leaves, stirred by the breeze, falling and the soldiers marching and afterward the road bare and white except for the leaves.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>그해 늦여름, 우리는 강과 평원을 가로질러 산을 마주 보는 마을의 한 집에 살았다. 강바닥에는 햇볕에 하얗게 마른 조약돌과 바위들이 있었고, 물은 맑고 빠르게 흘렀으며 수로에서는 푸른빛을 띠었다. 군인들이 집 옆을 지나 길 아래로 내려갔고 그들이 일으키는 먼지가 나뭇잎을 하얗게 뒤덮었다. 나무의 몸통도 먼지투성이였고 그해 나뭇잎은 일찍 떨어졌다. 우리는 군인들이 길을 따라 행진하는 것과 먼지가 피어오르는 것, 그리고 산들바람에 흔들려 떨어지는 나뭇잎과 행진하는 군인들을 보았고, 그 후 길은 나뭇잎을 제외하고는 아무것도 없이 하얗게 드러났다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p>その<ruby>年<rt>とし</rt></ruby>の<ruby>晩夏<rt>ばんか</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>たちは<ruby>川<rt>かわ</rt></ruby>と<ruby>平野<rt>へいや</rt></ruby>を<ruby>越<rt>こ</rt></ruby>えて<ruby>山々<rt>やまやま</rt></ruby>を<ruby>望<rt>のぞ</rt></ruby>む<ruby>村<rt>むら</rt></ruby>の<ruby>一軒家<rt>いっけんや</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいた。<ruby>川床<rt>かわどこ</rt></ruby>には<ruby>小石<rt>こいし</rt></ruby>や<ruby>巨礫<rt>きょれき</rt></ruby>があり、<ruby>太陽<rt>たいよう</rt></ruby>の<ruby>下<rt>した</rt></ruby>で<ruby>乾<rt>かわ</rt></ruby>いて<ruby>白<rt>しろ</rt></ruby>く、<ruby>水<rt>みず</rt></ruby>は<ruby>澄<rt>す</rt></ruby>んで<ruby>速<rt>はや</rt></ruby>く<ruby>流<rt>なが</rt></ruby>れ、<ruby>水路<rt>すいろ</rt></ruby>では<ruby>青<rt>あお</rt></ruby>かった。<ruby>部隊<rt>ぶたい</rt></ruby>が<ruby>家<rt>いえ</rt></ruby>のそばを<ruby>通<rt>とお</rt></ruby>り、<ruby>道<rt>みち</rt></ruby>を<ruby>下<rt>くだ</rt></ruby>っていくと、<ruby>彼<rt>かれ</rt></ruby>らが<ruby>立<rt>た</rt></ruby>てる<ruby>埃<rt>ほこり</rt></ruby>が<ruby>木々<rt>きぎ</rt></ruby>の<ruby>葉<rt>は</rt></ruby>を<ruby>粉<rt>こな</rt></ruby>で<ruby>覆<rt>おお</rt></ruby>った。<ruby>木<rt>き</rt></ruby>の<ruby>幹<rt>みき</rt></ruby>もまた<ruby>埃<rt>ほこり</rt></ruby>っぽく、その<ruby>年<rt>とし</rt></ruby>の<ruby>葉<rt>は</rt></ruby>は<ruby>早<rt>はや</rt></ruby>く<ruby>落<rt>お</rt></ruby>ちた。<ruby>私<rt>わたし</rt></ruby>たちは、<ruby>部隊<rt>ぶたい</rt></ruby>が<ruby>道<rt>みち</rt></ruby>に<ruby>沿<rt>そ</rt></ruby>って<ruby>行進<rt>こうしん</rt></ruby>し、<ruby>埃<rt>ほこり</rt></ruby>が<ruby>舞<rt>ま</rt></ruby>い<ruby>上<rt>あ</rt></ruby>がり、そよ<ruby>風<rt>かぜ</rt></ruby>に<ruby>揺<rt>ゆ</rt></ruby>れる<ruby>葉<rt>は</rt></ruby>が<ruby>落<rt>お</rt></ruby>ち、<ruby>兵士<rt>へいし</rt></ruby>たちが<ruby>行進<rt>こうしん</rt></ruby>するのを<ruby>見<rt>み</rt></ruby>た。その<ruby>後<rt>あと</rt></ruby>、<ruby>道<rt>みち</rt></ruby>は<ruby>葉<rt>は</rt></ruby>を<ruby>除<rt>のぞ</rt></ruby>いて、むき<ruby>出<rt>だ</rt></ruby>しで<ruby>白<rt>しろ</rt></ruby>かった。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarence S. Day: Life with Father | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Clarence S. Day: Life with Father</h1>
+            <h2>아버지와 함께한 인생 (父との生活)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>Father held that all children should be taught to play on something, and sing. He was right, perhaps. At any rate, there is a great deal to be said for his program. On the other hand, there are children and children. I had no ear for music. Father was the last man to take this into consideration, however : he looked upon children as raw material that a father should mold. When I said I couldn't sing, he said nonsense.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>아버지는 모든 아이가 무언가를 연주하고 노래하는 법을 배워야 한다고 생각하셨다. 아마도 아버지가 옳았을 것이다. 어쨌든, 아버지의 교육 방침에는 상당한 장점이 있다. 다른 한편으로, 세상에는 각양각색의 아이들이 있다. 나는 음악에 소질이 없었다. 하지만 아버지는 그런 점을 고려해 줄 분이 아니었다. 아버지는 아이들을 아버지가 빚어야 할 원자재로 여기셨다. 내가 노래를 못한다고 말했을 때, 아버지는 말도 안 되는 소리라고 하셨다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>父<rt>ちち</rt></ruby>は、すべての<ruby>子供<rt>こども</rt></ruby>が<ruby>何<rt>なに</rt></ruby>かを<ruby>演奏<rt>えんそう</rt></ruby>し、<ruby>歌<rt>うた</rt></ruby>うことを<ruby>教<rt>おそ</rt></ruby>わるべきだと<ruby>主張<rt>しゅちょう</rt></ruby>していた。<ruby>恐<rt>おそ</rt></ruby>らく、<ruby>父<rt>ちち</rt></ruby>は<ruby>正<rt>ただ</rt></ruby>しかったのだろう。いずれにせよ、<ruby>彼<rt>かれ</rt></ruby>の<ruby>方針<rt>ほうしん</rt></ruby>には<ruby>大<rt>おお</rt></ruby>いに<ruby>評価<rt>ひょうか</rt></ruby>すべき<ruby>点<rt>てん</rt></ruby>がある。<ruby>一方<rt>いっぽう</rt></ruby>で、<ruby>子供<rt>こども</rt></ruby>には<ruby>様々<rt>さまざま</rt></ruby>な<ruby>子供<rt>こども</rt></ruby>がいる。<ruby>私<rt>わたし</rt></ruby>には<ruby>音楽<rt>おんがく</rt></ruby>の<ruby>才<rt>さい</rt></ruby>がなかった。しかし、<ruby>父<rt>ちち</rt></ruby>はこれを<ruby>考慮<rt>こうりょ</rt></ruby>に<ruby>入<rt>い</rt></ruby>れるような<ruby>人<rt>ひと</rt></ruby>ではまったくなかった。<ruby>彼<rt>かれ</rt></ruby>は<ruby>子供<rt>こども</rt></ruby>を、<ruby>父親<rt>ちちおや</rt></ruby>が<ruby>鋳造<rt>ちゅうぞう</rt></ruby>すべき<ruby>原材料<rt>げんざいりょう</rt></ruby>と<ruby>見<rt>み</rt></ruby>なしていたのだ。<ruby>私<rt>わたし</rt></ruby>が<ruby>歌<rt>うた</rt></ruby>えないと<ruby>言<rt>い</rt></ruby>うと、<ruby>父<rt>ちち</rt></ruby>はばかげていると<ruby>言<rt>い</rt></ruby>った。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

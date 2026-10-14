@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T. S. Eliot: Notes towards the Definition of Culture | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>T. S. Eliot: Notes towards the Definition of Culture</h1>
+            <h2>문화의 정의를 위한 노트 (文化の定義への覚書)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>People are always ready to consider themselves persons of culture, on the strength of one proficiency, when they are not only lacking in others, but blind to those they lack. An artist of any kind, even a very great artist, is not for this reason alone a man of culture: artists are not only often insensitive to other arts than those which they practise, but sometimes have very bad manners or meager intellectual gifts. The person who contributes to culture, however important his contribution may be, is not always a “cultured person.”</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>사람들은 다른 재능은 부족할 뿐만 아니라 자신이 부족한 점에는 눈을 감고 있으면서도, 단 하나의 재능을 바탕으로 자신을 교양 있는 사람으로 여기려는 경향이 항상 있다. 어떤 종류의 예술가든, 심지어 매우 위대한 예술가라 할지라도, 단지 그 이유만으로 교양 있는 사람이 되는 것은 아니다. 예술가들은 자신이 종사하는 예술 외의 다른 예술에는 종종 무감각할 뿐만 아니라, 때로는 매우 나쁜 태도를 가지거나 지적인 재능이 부족하기도 하다. 문화에 기여하는 사람이, 그 기여가 아무리 중요할지라도, 항상 '교양 있는 사람'인 것은 아니다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>人々<rt>ひとびと</rt></ruby>は、<ruby>他<rt>ほか</rt></ruby>の<ruby>能力<rt>のうりょく</rt></ruby>に<ruby>欠<rt>か</rt></ruby>けているだけでなく、<ruby>自<rt>みずか</rt></ruby>らが<ruby>欠<rt>か</rt></ruby>いているものには<ruby>盲目<rt>もうもく</rt></ruby>でありながら、<ruby>一<rt>ひと</rt></ruby>つの<ruby>熟達<rt>じゅくたつ</rt></ruby>を<ruby>根拠<rt>こんきょ</rt></ruby>に<ruby>自分<rt>じぶん</rt></ruby>たちを<ruby>文化<rt>ぶんか</rt></ruby><ruby>人<rt>じん</rt></ruby>だと<ruby>見<rt>み</rt></ruby>なす<ruby>準備<rt>じゅんび</rt></ruby>がいつでもできている。いかなる<ruby>種類<rt>しゅるい</rt></ruby>の<ruby>芸術家<rt>げいじゅつか</rt></ruby>も、たとえ<ruby>非常<rt>ひじょう</rt></ruby>に<ruby>偉大<rt>いだい</rt></ruby>な<ruby>芸術家<rt>げいじゅつか</rt></ruby>であっても、この<ruby>理由<rt>りゆう</rt></ruby>だけで<ruby>文化<rt>ぶんか</rt></ruby><ruby>人<rt>じん</rt></ruby>であるとは<ruby>限<rt>かぎ</rt></ruby>らない。<ruby>芸術家<rt>げいじゅつか</rt></ruby>たちは、<ruby>自<rt>みずか</rt></ruby>らが<ruby>実践<rt>じっせん</rt></ruby>する<ruby>芸術<rt>げいじゅつ</rt></ruby><ruby>以外<rt>いがい</rt></ruby>の<ruby>他<rt>ほか</rt></ruby>の<ruby>芸術<rt>げいじゅつ</rt></ruby>に<ruby>鈍感<rt>どんかん</rt></ruby>であることが<ruby>多<rt>おお</rt></ruby>いだけでなく、<ruby>時<rt>とき</rt></ruby>には<ruby>非常<rt>ひじょう</rt></ruby>に<ruby>行儀<rt>ぎょうぎ</rt></ruby>が<ruby>悪<rt>わる</rt></ruby>かったり、<ruby>乏<rt>とぼ</rt></ruby>しい<ruby>知的<rt>ちてき</rt></ruby><ruby>才能<rt>さいのう</rt></ruby>しか<ruby>持<rt>も</rt></ruby>たなかったりする。<ruby>文化<rt>ぶんか</rt></ruby>に<ruby>貢献<rt>こうけん</rt></ruby>する<ruby>人<rt>ひと</rt></ruby>が、その<ruby>貢献<rt>こうけん</rt></ruby>がどれほど<ruby>重要<rt>じゅうよう</rt></ruby>であっても、<ruby>常<rt>つね</rt></ruby>に「<ruby>教養<rt>きょうよう</rt></ruby>ある<ruby>人<rt>ひと</rt></ruby>」であるとは<ruby>限<rt>かぎ</rt></ruby>らない。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Lynd: A Sermon on Shaving | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Robert Lynd: A Sermon on Shaving</h1>
+            <h2>면도에 관한 설교 (髭剃りに関する説教)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>There is not an iron law of shaving. You must either not shave at all or you must shave every day. Here there is no room for the moderate man, the lover of compromise, the good-natured being who likes to make the best of both worlds. If you do not shave at all you will be respected. If you shave regularly every morning you will be respected. But if you attempt to strike a nice balance and shave one day and grow a beard another, both camps will combine to denounce you as though you were something unclean.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>면도에는 철칙이 없다. 아예 면도를 하지 않거나, 아니면 매일 해야 한다. 여기에는 타협을 사랑하는 온건한 사람, 양쪽 세상의 좋은 점만 취하려는 선량한 존재가 끼어들 자리가 없다. 면도를 전혀 하지 않으면 존중받을 것이다. 매일 아침 규칙적으로 면도를 해도 존중받을 것이다. 그러나 멋진 균형을 맞춰 하루는 면도하고 다른 날은 수염을 기르려고 시도한다면, 양쪽 진영은 당신을 마치 불결한 존재인 것처럼 비난하기 위해 연합할 것이다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>髭剃<rt>ひげそ</rt></ruby>りには<ruby>鉄<rt>てつ</rt></ruby>の<ruby>掟<rt>おきて</rt></ruby>はない。<ruby>全<rt>まった</rt></ruby>く<ruby>剃<rt>そ</rt></ruby>らないか、<ruby>毎日<rt>まいにち</rt></ruby><ruby>剃<rt>そ</rt></ruby>るかのどちらかでなければならない。ここには、<ruby>妥協<rt>だきょう</rt></ruby>を<ruby>愛<rt>あい</rt></ruby>する<ruby>穏健<rt>おんけん</rt></ruby>な<ruby>男<rt>おとこ</rt></ruby>や、<ruby>両方<rt>りょうほう</rt></ruby>の<ruby>世界<rt>せかい</rt></ruby>の<ruby>良<rt>よ</rt></ruby>いところ<ruby>取<rt>ど</rt></ruby>りを<ruby>好<rt>この</rt></ruby>むお<ruby>人好<rt>ひとよ</rt></ruby>しが<ruby>入<rt>はい</rt></ruby>り<ruby>込<rt>こ</rt></ruby>む<ruby>余地<rt>よち</rt></ruby>はない。<ruby>全<rt>まった</rt></ruby>く<ruby>剃<rt>そ</rt></ruby>らなければ<ruby>尊敬<rt>そんけい</rt></ruby>されるだろう。<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>規則<rt>きそく</rt></ruby><ruby>正<rt>ただ</rt></ruby>しく<ruby>剃<rt>そ</rt></ruby>っても<ruby>尊敬<rt>そんけい</rt></ruby>されるだろう。しかし、うまいバランスを<ruby>取<rt>と</rt></ruby>ろうとして、ある<ruby>日<rt>ひ</rt></ruby>は<ruby>剃<rt>そ</rt></ruby>り、<ruby>次<rt>つぎ</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>は<ruby>髭<rt>ひげ</rt></ruby>を<ruby>生<rt>は</rt></ruby>やそうと<ruby>試<rt>こころ</rt></ruby>みるなら、<ruby>両<rt>りょう</rt></ruby><ruby>陣営<rt>じんえい</rt></ruby>は<ruby>結託<rt>けったく</rt></ruby>して、まるで<ruby>不潔<rt>ふけつ</rt></ruby>な<ruby>存在<rt>そんざい</rt></ruby>であるかのようにあなたを<ruby>非難<rt>ひなん</rt></ruby>するだろう。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

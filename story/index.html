@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전북과학고 정보융합 영어 명문장 학습 리스트</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background-color: #f4f7f6; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #3498db; color: white; }
+        tr:hover { background-color: #f1f1f1; }
+        a { text-decoration: none; color: #2980b9; font-weight: bold; }
+        a:hover { color: #e74c3c; text-decoration: underline; }
+        .no { width: 10%; text-align: center; color: #7f8c8d; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>📚 JSHS Information Convergence English Literature & Essays Index</h2>
+    <table>
+        <thead>
+            <tr>
+                <th class="no">No.</th>
+                <th>Author & Title</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody id="linkTable">
+            </tbody>
+    </table>
+</div>
+
+<script>
+    const data = [
+        ["01", "Bertrand Russell: Fact and Fiction"], ["02", "W. S. Maugham: The Summing Up"], ["03", "Albert Einstein: I Believe"],
+        ["04", "John B. Priestley: Rain upon Godshill"], ["05", "D. H. Lawrence: Selected Essays"], ["06", "Virginia Woolf: How Should One Read a Book?"],
+        ["07", "John Steinbeck: Travels with Charley"], ["08", "Otto Jespersen: Essentials of English Grammar"], ["09", "George Gissing: The Private Papers of Henry Ryecroft"],
+        ["10", "John Stuart Mill: On Liberty"], ["11", "Alfred G. Gardiner: Leaves in the Wind"], ["12", "John B. Bury: A History of Freedom of Thought"],
+        ["13", "Julian S. Huxley: Evolutionary Humanism"], ["14", "Arthur Clutton-Brock: On Friendship"], ["15", "Lafcadio Hearn: Life and Literature"],
+        ["16", "Robert L. Stevenson: The Sire de Malétroit"], ["17", "John F. Kennedy: Message on Peace Corps"], ["18", "Edward M. Forster: What I Believe"],
+        ["19", "Graham Greene: The Lost Childhood"], ["20", "Viscount Samuel: Belief and Action"], ["21", "James Hilton: Goodbye, Mr. Chips"],
+        ["22", "Henry Bradley: The Making of English"], ["23", "T. S. Eliot: Notes towards the Definition of Culture"], ["24", "Sir Richard Gregory: Truth and Testimony"],
+        ["25", "Albert Schweitzer: African Notebook"], ["26", "Robert Lynd: A Sermon on Shaving"], ["27", "W. S. Maugham: The Summing Up"],
+        ["28", "Arnold Bennett: The Author's Craft"], ["29", "J. B. Priestley: The Bradford Schoolmaster"], ["30", "Aldous L. Huxley: Along the Road"],
+        ["31", "Christopher Dawson: Religion and Culture"], ["32", "Bertrand Russell: What Neutrals Can Do to Save the World"], ["33", "William H. Hudson: Among the Birds"],
+        ["34", "William Saroyan: The Great Leapfrog Contest"], ["35", "Ernest Hemingway: A Farewell to Arms"], ["36", "Newsweek, November 19, 1973"],
+        ["37", "Clarence S. Day: Life with Father"], ["38", "G. Gissing: The Private Papers of Henry Ryecroft"], ["39", "Lafcadio Hearn: The Bible in English Literature"],
+        ["40", "George Orwell: Animal Farm"], ["41", "D. H. Lawrence: Apocalypse"], ["42", "Samuel Smiles: Self-Help"],
+        ["43", "Julian S. Huxley: Man as a Relative Being"], ["44", "W. S. Maugham: The Happy Man"], ["45", "Aldous L. Huxley: Ends and Means"],
+        ["46", "Lyndon B. Johnson: The Great Society"], ["47", "Julian Huxley: I Believe"], ["48", "Walter Allen: Reading a Novel"],
+        ["49", "Stanley Baldwin: Christian Ideals"], ["50", "W. S. Maugham: A Writer's Notebook"], ["51", "Bertrand Russell: Boredom and Excitement"],
+        ["52", "Ernest Hemingway: The Old Man and the Sea"], ["53", "W. S. Maugham: A Writer's Notebook"], ["54", "W. H. Hudson: Far Away and Long Ago"],
+        ["55", "Bertrand Russell: The Conquest of Happiness"], ["56", "J. Lord Avebury: The Use of Life"], ["57", "W. S. Maugham: Cakes and Ale"],
+        ["58", "R. L. Stevenson: Virginibus Puerisque"], ["59", "Bertrand Russell: The Future of Mankind"], ["60", "George M. Trevelyan: History of England"]
+    ];
+
+    const tbody = document.getElementById('linkTable');
+    data.forEach(item => {
+        // 번호를 세 자릿수(예: 01 -> 001)로 변환합니다.
+        const paddedNum = item[0].padStart(3, '0');
+        const row = `<tr>
+            <td class="no">${item[0]}</td>
+            <td>${item[1]}</td>
+            <td><a href="https://jsinsoo.github.io/tts/story/${paddedNum}.html" target="_blank">읽기 ↗</a></td>
+        </tr>`;
+        tbody.innerHTML += row;
+    });
+</script>
+
+</body>
+</html>

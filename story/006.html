@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virginia Woolf: How Should One Read a Book? | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Virginia Woolf: How Should One Read a Book?</h1>
+            <h2>어떻게 책을 읽을 것인가? (いかにして本を読むべきか)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>After all, what laws can be laid down about books? The battle of Waterloo was certainly fought on a certain day; but is Hamlet a better play than Lear? Nobody can say. Each must decide that question by himself. To admit authorities into our libraries and let them tell us how to read, what to read, what value to place upon what we read, is to destroy the spirit of freedom which is the breath of those sanctuaries. Everywhere else we may be bound by laws and conventions—there we have none.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>결국, 책에 대해 어떤 법칙을 세울 수 있단 말인가? 워털루 전투가 특정 날짜에 벌어졌다는 것은 확실하지만, '햄릿'이 '리어왕'보다 더 나은 희곡인가? 아무도 말할 수 없다. 각자 스스로 그 질문에 대해 결정해야만 한다. 권위자들을 우리의 도서관으로 받아들여 그들이 우리에게 어떻게 읽어야 할지, 무엇을 읽어야 할지, 우리가 읽는 것에 어떤 가치를 두어야 할지를 말하게 하는 것은, 그 성소들의 숨결인 자유의 정신을 파괴하는 것이다. 다른 모든 곳에서 우리는 법과 관습에 얽매여 있을지 모르지만, 그곳에서는 우리에게 아무것도 없다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>結局<rt>けっきょく</rt></ruby>のところ、<ruby>本<rt>ほん</rt></ruby>についてどのような<ruby>法則<rt>ほうそく</rt></ruby>を<ruby>定<rt>さだ</rt></ruby>めることができるだろうか？ワーテルローの<ruby>戦<rt>たたか</rt></ruby>いが<ruby>特定<rt>とくてい</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>に<ruby>戦<rt>たたか</rt></ruby>われたことは<ruby>確<rt>たし</rt></ruby>かだが、「ハムレット」は「リア<ruby>王<rt>おう</rt></ruby>」よりも<ruby>優<rt>すぐ</rt></ruby>れた<ruby>戯曲<rt>ぎきょく</rt></ruby>だろうか？<ruby>誰<rt>だれ</rt></ruby>も<ruby>言<rt>い</rt></ruby>うことはできない。<ruby>各人<rt>かくじん</rt></ruby>が<ruby>自分<rt>じぶん</rt></ruby>でその<ruby>問題<rt>もんだい</rt></ruby>を<ruby>決定<rt>けってい</rt></ruby>しなければならない。<ruby>権威<rt>けんい</rt></ruby>を<ruby>我々<rt>われわれ</rt></ruby>の<ruby>図書館<rt>としょかん</rt></ruby>に<ruby>受<rt>う</rt></ruby>け<ruby>入<rt>い</rt></ruby>れ、<ruby>彼<rt>かれ</rt></ruby>らに<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>、<ruby>何<rt>なに</rt></ruby>を<ruby>読<rt>よ</rt></ruby>むべきか、<ruby>我々<rt>われわれ</rt></ruby>が<ruby>読<rt>よ</rt></ruby>むものにどのような<ruby>価値<rt>かち</rt></ruby>を<ruby>置<rt>お</rt></ruby>くべきかを<ruby>語<rt>かた</rt></ruby>らせることは、それらの<ruby>聖域<rt>せいいき</rt></ruby>の<ruby>息吹<rt>いぶき</rt></ruby>である<ruby>自由<rt>じゆう</rt></ruby>の<ruby>精神<rt>せいしん</rt></ruby>を<ruby>破壊<rt>はかい</rt></ruby>することである。<ruby>他<rt>ほか</rt></ruby>のどこであれ、<ruby>我々<rt>われわれ</rt></ruby>は<ruby>法律<rt>ほうりつ</rt></ruby>や<ruby>慣習<rt>かんしゅう</rt></ruby>に<ruby>縛<rt>しば</rt></ruby>られるかもしれないが、そこでは<ruby>我々<rt>われわれ</rt></ruby>には<ruby>何<rt>なに</rt></ruby>もないのだ。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Saroyan: The Great Leapfrog Contest | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>William Saroyan: The Great Leapfrog Contest</h1>
+            <h2>위대한 개구리 경주 (偉大なる蛙跳び競争)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>Rosie had little use for girls, and so far as possible avoided them. She had less use for boys, but found it undesirable to avoid them. That is to say, she made it a point to take part in everything the boys did. She was always on hand, and always the first to take up any daring or crazy idea. Everybody felt awkward about her continuous presence, but it was no use trying to chase her away, because that meant a fight in which she asked no quarter, and gave none.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>로지는 여자아이들에게는 거의 관심이 없었고, 가능한 한 그들을 피했다. 그녀는 남자아이들에게는 더 관심이 없었지만, 그들을 피하는 것은 바람직하지 않다고 생각했다. 다시 말해, 그녀는 남자아이들이 하는 모든 일에 참여하는 것을 원칙으로 삼았다. 그녀는 항상 곁에 있었고, 대담하거나 엉뚱한 아이디어가 나오면 언제나 가장 먼저 받아들였다. 모두가 그녀의 계속되는 존재에 대해 어색함을 느꼈지만, 그녀를 쫓아내려는 시도는 소용이 없었다. 왜냐하면 그것은 그녀가 조금도 봐주지 않고, 자비도 베풀지 않는 싸움을 의미했기 때문이다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p>ロージーは<ruby>少女<rt>しょうじょ</rt></ruby>たちにはほとんど<ruby>関心<rt>かんしん</rt></ruby>がなく、できるだけ<ruby>彼女<rt>かのじょ</rt></ruby>らを<ruby>避<rt>さ</rt></ruby>けていた。<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>少年<rt>しょうねん</rt></ruby>たちにはさらに<ruby>関心<rt>かんしん</rt></ruby>がなかったが、<ruby>彼<rt>かれ</rt></ruby>らを<ruby>避<rt>さ</rt></ruby>けることは<ruby>望<rt>のぞ</rt></ruby>ましくないと<ruby>感<rt>かん</rt></ruby>じていた。つまり、<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>少年<rt>しょうねん</rt></ruby>たちがするすべてのことに<ruby>参加<rt>さんか</rt></ruby>することを<ruby>信条<rt>しんじょう</rt></ruby>としていたのだ。<ruby>彼女<rt>かのじょ</rt></ruby>はいつも<ruby>手近<rt>てぢか</rt></ruby>なところにいて、<ruby>大胆<rt>だいたん</rt></ruby>で<ruby>突飛<rt>とっぴ</rt></ruby>なアイデアが<ruby>出<rt>で</rt></ruby>るといつも<ruby>真<rt>ま</rt></ruby>っ<ruby>先<rt>さき</rt></ruby>にそれを<ruby>受<rt>う</rt></ruby>け<ruby>入<rt>い</rt></ruby>れた。<ruby>誰<rt>だれ</rt></ruby>もが<ruby>彼女<rt>かのじょ</rt></ruby>の<ruby>絶<rt>た</rt></ruby>え<ruby>間<rt>ま</rt></ruby>ない<ruby>存在<rt>そんざい</rt></ruby>に<ruby>気<rt>き</rt></ruby>まずさを<ruby>感<rt>かん</rt></ruby>じていたが、<ruby>彼女<rt>かのじょ</rt></ruby>を<ruby>追<rt>お</rt></ruby>い<ruby>払<rt>はら</rt></ruby>おうとするのは<ruby>無駄<rt>むだ</rt></ruby>であった。なぜなら、それは<ruby>彼女<rt>かのじょ</rt></ruby>が<ruby>一切<rt>いっさい</rt></ruby>の<ruby>手加減<rt>てかげん</rt></ruby>をせず、<ruby>容赦<rt>ようしゃ</rt></ruby>もしない<ruby>戦<rt>たたか</rt></ruby>いを<ruby>意味<rt>いみ</rt></ruby>したからである。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

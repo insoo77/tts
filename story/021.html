@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Hilton: Goodbye, Mr. Chips | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>James Hilton: Goodbye, Mr. Chips</h1>
+            <h2>굿바이, 미스터 칩스 (チップス先生さようなら)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>One day, climbing on Great Gable, Chips noticed a girl waving excitedly from a dangerous-looking ledge. Thinking she was in difficulties he hastened towards her, but in doing so slipped himself and wrenched his ankle. As it turned out, she was not in difficulties at all, but was merely signaling to a friend farther down the mountain; she was an expert climber, better even than Chips, who was pretty good. Thus he found himself the rescued instead of the rescuer, and neither role was one for which he had much relish. For he did not, he would have said, care for women; he never felt at home or at ease with them; and that monstrous creature beginning to be talked about, the New Woman of the nineties, filled him with horror.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>어느 날, 그레이트 게이블을 오르던 칩스는 위험해 보이는 바위 선반에서 한 소녀가 흥분하여 손을 흔드는 것을 발견했다. 그녀가 곤경에 처했다고 생각한 그는 그녀를 향해 서둘러 다가갔지만, 그러다가 그만 미끄러져 발목을 삐끗하고 말았다. 알고 보니, 그녀는 전혀 곤경에 처한 것이 아니었고, 단지 산 아래에 있는 친구에게 신호를 보내고 있었을 뿐이었다. 그녀는 꽤 실력이 좋은 칩스보다도 뛰어난 전문 등반가였다. 그리하여 그는 구조자 대신 구조된 사람이 된 자신을 발견했고, 두 역할 모두 그가 그다지 즐기는 역할은 아니었다. 그는, 아마 스스로도 그렇게 말했겠지만, 여성을 좋아하지 않았기 때문이다. 그는 여성들과 함께 있을 때 결코 편안하거나 마음이 놓이지 않았다. 그리고 1890년대의 '신여성'이라는, 화제에 오르기 시작한 그 기괴한 존재는 그를 공포로 가득 채웠다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p>ある<ruby>日<rt>ひ</rt></ruby>、グレート・ゲーブルに<ruby>登<rt>のぼ</rt></ruby>っていたチップスは、<ruby>危険<rt>きけん</rt></ruby>そうな<ruby>岩棚<rt>いわだな</rt></ruby>から、ある<ruby>少女<rt>しょうじょ</rt></ruby>が<ruby>興奮<rt>こうふん</rt></ruby>して<ruby>手<rt>て</rt></ruby>を<ruby>振<rt>ふ</rt></ruby>っているのに<ruby>気<rt>き</rt></ruby>づいた。<ruby>彼女<rt>かのじょ</rt></ruby>が<ruby>困難<rt>こんなん</rt></ruby>な<ruby>状況<rt>じょうきょう</rt></ruby>にあると<ruby>思<rt>おも</rt></ruby>い、<ruby>彼<rt>かれ</rt></ruby>は<ruby>彼女<rt>かのじょ</rt></ruby>のもとへ<ruby>急<rt>いそ</rt></ruby>いだが、その<ruby>途中<rt>とちゅう</rt></ruby>で<ruby>足<rt>あし</rt></ruby>を<ruby>滑<rt>すべ</rt></ruby>らせて<ruby>足首<rt>あしくび</rt></ruby>を<ruby>捻挫<rt>ねんざ</rt></ruby>してしまった。<ruby>結局<rt>けっきょく</rt></ruby>のところ、<ruby>彼女<rt>かのじょ</rt></ruby>はまったく<ruby>困難<rt>こんなん</rt></ruby>な<ruby>状況<rt>じょうきょう</rt></ruby>にはなく、ただ<ruby>山<rt>やま</rt></ruby>のさらに<ruby>下<rt>した</rt></ruby>にいる<ruby>友人<rt>ゆうじん</rt></ruby>に<ruby>合図<rt>あいず</rt></ruby>を<ruby>送<rt>おく</rt></ruby>っていただけだった。<ruby>彼女<rt>かのじょ</rt></ruby>は、かなり<ruby>上手<rt>うま</rt></ruby>かったチップスよりもさらに<ruby>優<rt>すぐ</rt></ruby>れた、<ruby>熟練<rt>じゅくれん</rt></ruby>の<ruby>登山家<rt>とざんか</rt></ruby>だったのだ。こうして<ruby>彼<rt>かれ</rt></ruby>は、<ruby>救助者<rt>きゅうじょしゃ</rt></ruby>ではなく<ruby>救助<rt>きゅうじょ</rt></ruby>される<ruby>側<rt>がわ</rt></ruby>になった<ruby>自分<rt>じぶん</rt></ruby>を<ruby>発見<rt>はっけん</rt></ruby>し、どちらの<ruby>役割<rt>やくわり</rt></ruby>も<ruby>彼<rt>かれ</rt></ruby>があまり<ruby>好<rt>この</rt></ruby>むものではなかった。なぜなら<ruby>彼<rt>かれ</rt></ruby>は、<ruby>自分<rt>じぶん</rt></ruby>でもそう<ruby>言<rt>い</rt></ruby>っただろうが、<ruby>女性<rt>じょせい</rt></ruby>を<ruby>好<rt>この</rt></ruby>まなかったからだ。<ruby>彼<rt>かれ</rt></ruby>は<ruby>彼女<rt>かのじょ</rt></ruby>たちと<ruby>一緒<rt>いっしょ</rt></ruby>にいても、<ruby>決<rt>けっ</rt></ruby>して<ruby>心地<rt>ここち</rt></ruby>よくも<ruby>安<rt>やす</rt></ruby>らかでもなかった。そして、<ruby>九十年代<rt>きゅうじゅうねんだい</rt></ruby>の「<ruby>新<rt>あたら</rt></ruby>しい<ruby>女性<rt>じょせい</rt></ruby>」という、<ruby>話題<rt>わだい</rt></ruby>になり<ruby>始<rt>はじ</rt></ruby>めたその<ruby>怪物<rt>かいぶつ</rt></ruby>のような<ruby>存在<rt>そんざい</rt></ruby>は、<ruby>彼<rt>かれ</rt></ruby>を<ruby>恐怖<rt>きょうふ</rt></ruby>で<ruby>満<rt>み</rt></ruby>たした。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

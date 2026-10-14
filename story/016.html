@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert L. Stevenson: The Sire de Malétroit | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Robert L. Stevenson: The Sire de Malétroit</h1>
+            <h2>말레트루아의 영주 (マルトロワの領主)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>Life is a little vapor that passes away, as we are told by those in holy orders. When a man is in a fair way and sees all life open in front of him, he seems to himself to make a very important figure in the world. His horse whinnies to him; the trumpets blow and the girls look out of windows as he rides into town before his company; he receives many assurances of trust and regard. But once he is dead, were he as brave as Hercules or as wise as Solomon, he is soon forgotten.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>성직자들이 말하듯이, 인생은 사라져가는 잠시의 증기와 같다. 한 남자가 순탄한 길을 가고 그의 앞에 모든 삶이 열려 있는 것을 볼 때, 그는 스스로 세상에서 매우 중요한 인물이라고 여기는 듯하다. 그의 말은 그를 향해 히힝거리며 울고, 트럼펫이 울리며, 그가 부하들을 이끌고 마을로 들어설 때 소녀들은 창밖을 내다본다. 그는 신뢰와 존경의 많은 확신을 받는다. 그러나 일단 그가 죽으면, 그가 헤라클레스처럼 용감했거나 솔로몬처럼 현명했다 할지라도, 그는 곧 잊힌다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>人生<rt>じんせい</rt></ruby>とは、<ruby>聖職<rt>せいしょく</rt></ruby><ruby>者<rt>しゃ</rt></ruby>たちが<ruby>言<rt>い</rt></ruby>うように、<ruby>消<rt>き</rt></ruby>え<ruby>去<rt>さ</rt></ruby>る<ruby>束の間<rt>つかのま</rt></ruby>の<ruby>蒸気<rt>じょうき</rt></ruby>のようなものである。<ruby>男<rt>おとこ</rt></ruby>が<ruby>順風<rt>じゅんぷう</rt></ruby><ruby>満帆<rt>まんぱん</rt></ruby>の<ruby>道<rt>みち</rt></ruby>を<ruby>進<rt>すす</rt></ruby>み、<ruby>目<rt>め</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>に<ruby>全<rt>すべ</rt></ruby>ての<ruby>人生<rt>じんせい</rt></ruby>が<ruby>開<rt>ひら</rt></ruby>けているのを<ruby>見<rt>み</rt></ruby>るとき、<ruby>彼<rt>かれ</rt></ruby>は<ruby>自分<rt>じぶん</rt></ruby>が<ruby>世界<rt>せかい</rt></ruby>で<ruby>非常<rt>ひじょう</rt></ruby>に<ruby>重要<rt>じゅうよう</rt></ruby>な<ruby>人物<rt>じんぶつ</rt></ruby>であるかのように<ruby>思<rt>おも</rt></ruby>える。<ruby>彼<rt>かれ</rt></ruby>の<ruby>馬<rt>うま</rt></ruby>は<ruby>彼<rt>かれ</rt></ruby>に<ruby>向<rt>む</rt></ruby>かっていななき、<ruby>彼<rt>かれ</rt></ruby>が<ruby>部下<rt>ぶか</rt></ruby>を<ruby>率<rt>ひき</rt></ruby>いて<ruby>町<rt>まち</rt></ruby>に<ruby>入<rt>はい</rt></ruby>るとき、トランペットが<ruby>鳴<rt>な</rt></ruby>り<ruby>響<rt>ひび</rt></ruby>き、<ruby>少女<rt>しょうじょ</rt></ruby>たちは<ruby>窓<rt>まど</rt></ruby>から<ruby>外<rt>そと</rt></ruby>を<ruby>眺<rt>なが</rt></ruby>める。<ruby>彼<rt>かれ</rt></ruby>は<ruby>信頼<rt>しんらい</rt></ruby>と<ruby>尊敬<rt>そんけい</rt></ruby>の<ruby>多<rt>おお</rt></ruby>くの<ruby>証<rt>あかし</rt></ruby>を<ruby>受<rt>う</rt></ruby>け<ruby>取<rt>と</rt></ruby>る。しかし、ひとたび<ruby>彼<rt>かれ</rt></ruby>が<ruby>死<rt>し</rt></ruby>んでしまえば、たとえヘラクレスのように<ruby>勇敢<rt>ゆうかん</rt></ruby>であろうと、ソロモンのように<ruby>賢明<rt>けんめい</rt></ruby>であろうと、<ruby>彼<rt>かれ</rt></ruby>はすぐに<ruby>忘<rt>わす</rt></ruby>れ<ruby>去<rt>さ</rt></ruby>られるのだ。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

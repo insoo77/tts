@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viscount Samuel: Belief and Action | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Viscount Samuel: Belief and Action</h1>
+            <h2>신념과 행동 (信念と行動)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>Liberty is not, as is usually supposed, a single and simple conception. It has the four elements—national, political, personal, economic. The man who is fully free is one who lives in a country which is independent; in a State which is democratic; in a society where the laws are equal and restrictions at a minimum; in an economic system in which he has the latitude of a secure livelihood and assured comfort, and full opportunity to rise by merit.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>자유는 보통 생각하는 것처럼 단일하고 단순한 개념이 아니다. 그것은 국가적, 정치적, 개인적, 경제적이라는 네 가지 요소를 가지고 있다. 완전히 자유로운 사람은 독립적인 나라에 사는 사람이다. 즉, 민주적인 국가에, 법이 평등하고 제약이 최소한인 사회에, 그리고 안전한 생계와 보장된 안락함의 자유 및 능력에 따라 성장할 완전한 기회를 가진 경제 체제 안에 있는 사람이다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>自由<rt>じゆう</rt></ruby>は、<ruby>通常<rt>つうじょう</rt></ruby><ruby>考<rt>かんが</rt></ruby>えられているように、<ruby>単一<rt>たんいつ</rt></ruby>で<ruby>単純<rt>たんじゅん</rt></ruby>な<ruby>概念<rt>がいねん</rt></ruby>ではない。それには<ruby>四<rt>よっ</rt></ruby>つの<ruby>要素<rt>ようそ</rt></ruby>―<ruby>国家的<rt>こっかてき</rt></ruby>、<ruby>政治的<rt>せいじてき</rt></ruby>、<ruby>個人的<rt>こじんてき</rt></ruby>、<ruby>経済的<rt>けいざいてき</rt></ruby>―がある。<ruby>完全<rt>かんぜん</rt></ruby>に<ruby>自由<rt>じゆう</rt></ruby>な<ruby>人<rt>ひと</rt></ruby>とは、<ruby>独立<rt>どくりつ</rt></ruby>した<ruby>国<rt>くに</rt></ruby>に<ruby>住<rt>す</rt></ruby>む<ruby>人<rt>ひと</rt></ruby>である。<ruby>民主的<rt>みんしゅてき</rt></ruby>な<ruby>国家<rt>こっか</rt></ruby>に、<ruby>法<rt>ほう</rt></ruby>が<ruby>平等<rt>びょうどう</rt></ruby>で<ruby>制約<rt>せいやく</rt></ruby>が<ruby>最小限<rt>さいしょうげん</rt></ruby>である<ruby>社会<rt>しゃかい</rt></ruby>に、<ruby>安定<rt>あんてい</rt></ruby>した<ruby>生計<rt>せいけい</rt></ruby>と<ruby>保証<rt>ほしょう</rt></ruby>された<ruby>快適<rt>かいてき</rt></ruby>さの<ruby>自由<rt>じゆう</rt></ruby>、そして<ruby>能力<rt>のうりょく</rt></ruby>によって<ruby>昇進<rt>しょうしん</rt></ruby>する<ruby>完全<rt>かんぜん</rt></ruby>な<ruby>機会<rt>きかい</rt></ruby>を<ruby>持<rt>も</rt></ruby>つ<ruby>経済<rt>けいざい</rt></ruby><ruby>体制<rt>たいせい</rt></ruby>の<ruby>中<rt>なか</rt></ruby>にいる<ruby>人<rt>ひと</rt></ruby>である。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

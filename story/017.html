@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John F. Kennedy: Message on Peace Corps | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>John F. Kennedy: Message on Peace Corps</h1>
+            <h2>평화 봉사단 메시지 (平和部隊へのメッセージ)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>The benefits of the Peace Corps will not be limited to the countries in which it serves. Our own young men and women will be enriched by the experience of living and working in foreign lands. They will have acquired new skills and experience which will aid them in their future careers and add to our own country's supply of trained personnel and teachers. They will return better able to assume the responsibilities of American citizenship and with greater understanding of our global responsibilities.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>평화봉사단의 혜택은 봉사단이 활동하는 국가에만 국한되지 않을 것입니다. 우리 자신의 젊은 남녀들은 해외에서 생활하고 일하는 경험을 통해 풍요로워질 것입니다. 그들은 미래 경력에 도움이 되고, 우리나라의 숙련된 인력과 교사 공급에 기여할 새로운 기술과 경험을 습득하게 될 것입니다. 그들은 미국 시민으로서의 책임을 더 잘 감당하고, 우리의 세계적 책임에 대한 더 큰 이해를 가지고 돌아올 것입니다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>平和<rt>へいわ</rt></ruby><ruby>部隊<rt>ぶたい</rt></ruby>の<ruby>恩恵<rt>おんけい</rt></ruby>は、それが<ruby>奉仕<rt>ほうし</rt></ruby>する<ruby>国々<rt>くにぐに</rt></ruby>だけに<ruby>限定<rt>げんてい</rt></ruby>されるものではありません。<ruby>私<rt>わたし</rt></ruby>たち<ruby>自身<rt>じしん</rt></ruby>の<ruby>若<rt>わか</rt></ruby>い<ruby>男女<rt>だんじょ</rt></ruby>は、<ruby>外国<rt>がいこく</rt></ruby>の<ruby>地<rt>ち</rt></ruby>で<ruby>生活<rt>せいかつ</rt></ruby>し<ruby>働<rt>はたら</rt></ruby>くという<ruby>経験<rt>けいけん</rt></ruby>によって<ruby>豊<rt>ゆた</rt></ruby>かになるでしょう。<ruby>彼<rt>かれ</rt></ruby>らは、<ruby>将来<rt>しょうらい</rt></ruby>のキャリアにおいて<ruby>彼<rt>かれ</rt></ruby>らを<ruby>助<rt>たす</rt></ruby>け、<ruby>我<rt>わ</rt></ruby>が<ruby>国<rt>くに</rt></ruby>の<ruby>訓練<rt>くんれん</rt></ruby>された<ruby>人材<rt>じんざい</rt></ruby>や<ruby>教師<rt>きょうし</rt></ruby>の<ruby>供給<rt>きょうきゅう</rt></ruby>を<ruby>増<rt>ま</rt></ruby>やすであろう<ruby>新<rt>あたら</rt></ruby>しい<ruby>技術<rt>ぎじゅつ</rt></ruby>と<ruby>経験<rt>けいけん</rt></ruby>を<ruby>身<rt>み</rt></ruby>につけるでしょう。<ruby>彼<rt>かれ</rt></ruby>らは、アメリカ<ruby>市民<rt>しみん</rt></ruby>としての<ruby>責任<rt>せきにん</rt></ruby>をよりよく<ruby>引<rt>ひ</rt></ruby>き<ruby>受<rt>う</rt></ruby>け、<ruby>私<rt>わたし</rt></ruby>たちの<ruby>地球<rt>ちきゅう</rt></ruby><ruby>規模<rt>きぼ</rt></ruby>の<ruby>責任<rt>せきにん</rt></ruby>に<ruby>対<rt>たい</rt></ruby>するより<ruby>深<rt>ふか</rt></ruby>い<ruby>理解<rt>りかい</rt></ruby>を<ruby>携<rt>たずさ</rt></ruby>えて<ruby>帰国<rt>きこく</rt></ruby>するでしょう。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lafcadio Hearn: The Bible in English Literature | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Lafcadio Hearn: The Bible in English Literature</h1>
+            <h2>영문학 속의 성경 (英文学における聖書)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>It is no exaggeration to say that the English Bible, next to Shakespeare, the greatest work in English literature, and that it will have much more influence than even Shakespeare upon the written and spoken language of the English race. For this reason, to study English literature without some general knowledge of the relation of the Bible to that literature would be to leave one's literary education very incomplete. It is not necessary to consider the work from a religious point of view at all; indeed, to so consider it would be rather a hindrance to the understanding of its literary excellence.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>영문학에서 셰익스피어 다음으로 가장 위대한 작품인 영문 성경이, 영어 민족의 문어와 구어에 셰익스피어보다 훨씬 더 큰 영향을 미칠 것이라고 말하는 것은 과장이 아니다. 이러한 이유로, 성경과 영문학의 관계에 대한 일반적인 지식 없이 영문학을 공부하는 것은 자신의 문학 교육을 매우 불완전하게 남겨두는 것과 같다. 그 작품을 종교적인 관점에서 전혀 고려할 필요는 없다. 실제로 그렇게 고려하는 것은 그 문학적 탁월함을 이해하는 데 오히려 방해가 될 것이다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>英文<rt>えいぶん</rt></ruby><ruby>聖書<rt>せいしょ</rt></ruby>が、シェイクスピアに<ruby>次<rt>つ</rt></ruby>ぐ<ruby>英文学<rt>えいぶんがく</rt></ruby>における<ruby>最<rt>もっと</rt></ruby>も<ruby>偉大<rt>いだい</rt></ruby>な<ruby>作品<rt>さくひん</rt></ruby>であり、<ruby>英語<rt>えいご</rt></ruby><ruby>民族<rt>みんぞく</rt></ruby>の<ruby>書<rt>か</rt></ruby>き<ruby>言葉<rt>ことば</rt></ruby>と<ruby>話<rt>はな</rt></ruby>し<ruby>言葉<rt>ことば</rt></ruby>にシェイクスピアさえも<ruby>凌<rt>しの</rt></ruby>ぐほどの<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えるであろうと<ruby>言<rt>い</rt></ruby>っても<ruby>過言<rt>かごん</rt></ruby>ではない。この<ruby>理由<rt>りゆう</rt></ruby>から、<ruby>聖書<rt>せいしょ</rt></ruby>とその<ruby>文学<rt>ぶんがく</rt></ruby>との<ruby>関係<rt>かんけい</rt></ruby>についての<ruby>一定<rt>いってい</rt></ruby>の<ruby>一般的<rt>いっぱんてき</rt></ruby>な<ruby>知識<rt>ちしき</rt></ruby>なしに<ruby>英文学<rt>えいぶんがく</rt></ruby>を<ruby>研究<rt>けんきゅう</rt></ruby>することは、<ruby>自<rt>みずか</rt></ruby>らの<ruby>文学<rt>ぶんがく</rt></ruby><ruby>教育<rt>きょういく</rt></ruby>を<ruby>非常<rt>ひじょう</rt></ruby>に<ruby>不完全<rt>ふかんぜん</rt></ruby>なままにしておくことになるだろう。<ruby>作品<rt>さくひん</rt></ruby>を<ruby>宗教<rt>しゅうきょう</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>観点<rt>かんてん</rt></ruby>から<ruby>考察<rt>こうさつ</rt></ruby>する<ruby>必要<rt>ひつよう</rt></ruby>は<ruby>全<rt>まった</rt></ruby>くない。それどころか、そのように<ruby>考察<rt>こうさつ</rt></ruby>することは、その<ruby>文学<rt>ぶんがく</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>卓越性<rt>たくえつせい</rt></ruby>を<ruby>理解<rt>りかい</rt></ruby>する<ruby>上<rt>うえ</rt></ruby>でむしろ<ruby>妨<rt>さまた</rt></ruby>げとなるだろう。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

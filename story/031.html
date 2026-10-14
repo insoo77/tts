@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christopher Dawson: Religion and Culture | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Christopher Dawson: Religion and Culture</h1>
+            <h2>종교와 문화 (宗教と文化)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>Religion is the key of history. We cannot understand the inner form of a society unless we understand its religion. We cannot understand its cultural achievements unless we understand the religious beliefs that lie behind them. In all ages the first creative works of a culture are due to a religious inspiration and dedicated to a religious end. The temples of the gods are the most enduring works of man. Religion stands at the threshold of all the great literature of the world. Philosophy is its offspring and is a child which constantly returns to its parent.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>종교는 역사의 열쇠이다. 우리는 한 사회의 종교를 이해하지 않고서는 그 사회의 내적 형태를 이해할 수 없다. 우리는 그 배후에 놓인 종교적 신념을 이해하지 않고서는 그 문화적 업적을 이해할 수 없다. 모든 시대에 걸쳐 한 문화의 최초 창조적인 작품들은 종교적 영감에 기인하며 종교적 목적에 헌신한다. 신들의 신전은 인간의 가장 영속적인 작품이다. 종교는 세계의 모든 위대한 문학의 문턱에 서 있다. 철학은 그것의 자손이며 끊임없이 그 부모에게로 돌아가는 자식이다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>宗教<rt>しゅうきょう</rt></ruby>は<ruby>歴史<rt>れきし</rt></ruby>の<ruby>鍵<rt>かぎ</rt></ruby>である。<ruby>我々<rt>われわれ</rt></ruby>は、その<ruby>宗教<rt>しゅうきょう</rt></ruby>を<ruby>理解<rt>りかい</rt></ruby>しないかぎり、<ruby>社会<rt>しゃかい</rt></ruby>の<ruby>内的<rt>ないてき</rt></ruby>な<ruby>形態<rt>けいたい</rt></ruby>を<ruby>理解<rt>りかい</rt></ruby>することはできない。<ruby>我々<rt>われわれ</rt></ruby>は、その<ruby>背後<rt>はいご</rt></ruby>にある<ruby>宗教<rt>しゅうきょう</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>信念<rt>しんねん</rt></ruby>を<ruby>理解<rt>りかい</rt></ruby>しないかぎり、その<ruby>文化<rt>ぶんか</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>業績<rt>ぎょうせき</rt></ruby>を<ruby>理解<rt>りかい</rt></ruby>することはできない。すべての<ruby>時代<rt>じだい</rt></ruby>において、<ruby>文化<rt>ぶんか</rt></ruby>の<ruby>最初<rt>さいしょ</rt></ruby>の<ruby>創造<rt>そうぞう</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>作品<rt>さくひん</rt></ruby>は、<ruby>宗教<rt>しゅうきょう</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>霊感<rt>れいかん</rt></ruby>によるものであり、<ruby>宗教<rt>しゅうきょう</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>目的<rt>もくてき</rt></ruby>に<ruby>捧<rt>ささ</rt></ruby>げられている。<ruby>神々<rt>かみがみ</rt></ruby>の<ruby>神殿<rt>しんでん</rt></ruby>は、<ruby>人間<rt>にんげん</rt></ruby>の<ruby>最<rt>もっと</rt></ruby>も<ruby>永続<rt>えいぞく</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>作品<rt>さくひん</rt></ruby>である。<ruby>宗教<rt>しゅうきょう</rt></ruby>は、<ruby>世界<rt>せかい</rt></ruby>のすべての<ruby>偉大<rt>いだい</rt></ruby>な<ruby>文学<rt>ぶんがく</rt></ruby>の<ruby>入口<rt>いりぐち</rt></ruby>に<ruby>立<rt>た</rt></ruby>っている。<ruby>哲学<rt>てつがく</rt></ruby>は、その<ruby>子孫<rt>しそん</rt></ruby>であり、<ruby>絶<rt>た</rt></ruby>えずその<ruby>親<rt>おや</rt></ruby>のもとへ<ruby>帰<rt>かえ</rt></ruby>る<ruby>子供<rt>こども</rt></ruby>である。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

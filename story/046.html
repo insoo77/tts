@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyndon B. Johnson: The Great Society | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Lyndon B. Johnson: The Great Society</h1>
+            <h2>위대한 사회 (グレート・ソサエティ)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>Our society can be a place where we will raise our families, free from the dark shadow of war and suspicion among nations. It can be a place where our children will grow up knowing that success in life depends only on their ability and not on the color of their skin, or their religion, or the region of their birth.</p>
+            <p>It can be a place where America is growing not only richer and stronger but happier and wiser. For whatever the strength of our arms, or whatever the size of our economy, we will not be a great nation unless we pursue excellence.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>우리 사회는 국가 간의 전쟁과 의심이라는 어두운 그림자로부터 벗어나 우리 가족을 키울 수 있는 곳이 될 수 있습니다. 우리 아이들이 인생의 성공은 오직 자신의 능력에 달려있으며, 피부색이나 종교, 또는 태어난 지역에 달려있지 않다는 것을 알며 자라나는 곳이 될 수 있습니다.</p>
+            <p>미국이 단지 더 부유하고 강해지는 것뿐만 아니라, 더 행복하고 현명해지는 곳이 될 수 있습니다. 우리 팔의 힘이 어떻든, 우리 경제의 규모가 어떻든, 우리가 탁월함을 추구하지 않는 한 우리는 위대한 국가가 될 수 없을 것입니다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>私<rt>わたし</rt></ruby>たちの<ruby>社会<rt>しゃかい</rt></ruby>は、<ruby>国家<rt>こっか</rt></ruby><ruby>間<rt>かん</rt></ruby>の<ruby>戦争<rt>せんそう</rt></ruby>と<ruby>疑念<rt>ぎねん</rt></ruby>という<ruby>暗<rt>くら</rt></ruby>い<ruby>影<rt>かげ</rt></ruby>から<ruby>解放<rt>かいほう</rt></ruby>され、<ruby>私<rt>わたし</rt></ruby>たちが<ruby>家族<rt>かぞく</rt></ruby>を<ruby>育<rt>そだ</rt></ruby>てられる<ruby>場所<rt>ばしょ</rt></ruby>になり<ruby>得<rt>え</rt></ruby>ます。<ruby>子供<rt>こども</rt></ruby>たちが、<ruby>人生<rt>じんせい</rt></ruby>における<ruby>成功<rt>せいこう</rt></ruby>は<ruby>肌<rt>はだ</rt></ruby>の<ruby>色<rt>いろ</rt></ruby>や<ruby>宗教<rt>しゅうきょう</rt></ruby>、<ruby>出身<rt>しゅっしん</rt></ruby><ruby>地域<rt>ちいき</rt></ruby>ではなく、ただ<ruby>自<rt>みずか</rt></ruby>らの<ruby>能力<rt>のうりょく</rt></ruby>のみに<ruby>かかっている<rt>かかっている</rt></ruby>のだと<ruby>知<rt>し</rt></ruby>りながら<ruby>成長<rt>せいちょう</rt></ruby>できる<ruby>場所<rt>ばしょ</rt></ruby>になり<ruby>得<rt>え</rt></ruby>ます。</p>
+            <p>アメリカが、より<ruby>豊<rt>ゆた</rt></ruby>かになり、より<ruby>強<rt>つよ</rt></ruby>くなるだけでなく、より<ruby>幸福<rt>こうふく</rt></ruby>で、より<ruby>賢<rt>かしこ</rt></ruby>くなる<ruby>場所<rt>ばしょ</rt></ruby>にすることができます。<ruby>腕<rt>うで</rt></ruby>の<ruby>力<rt>ちから</rt></ruby>がどうであれ、<ruby>経済<rt>けいざい</rt></ruby>の<ruby>規模<rt>きぼ</rt></ruby>がどうであれ、<ruby>私<rt>わたし</rt></ruby>たちが<ruby>卓越<rt>たくえつ</rt></ruby>を<ruby>追求<rt>ついきゅう</rt></ruby>しないかぎり、<ruby>偉大<rt>いだい</rt></ruby>な<ruby>国家<rt>こっか</rt></ruby>にはなれないでしょう。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

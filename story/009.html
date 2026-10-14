@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Gissing: The Private Papers of Henry Ryecroft | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>George Gissing: The Private Papers of Henry Ryecroft</h1>
+            <h2>헨리 라이크로프트의 사적인 기록 (ヘンリー・ライクロフトの私記)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>There is not the remotest possibility of anyone's calling upon me, and that I should call upon anyone else is a thing undreamt of. I owe a letter to a friend; perhaps I shall write it before bedtime; perhaps I shall leave it till tomorrow morning. A letter of friendship should never be written save when the spirit prompts. I have not yet looked at the newspaper. Generally I leave it till I come back tired from my walk; it amuses me then to see what the noisy world is doing. I grudge to give the first freshness of the morning mind to things so sad and foolish.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>누군가 나를 찾아올 가능성은 전혀 없으며, 내가 다른 누군가를 찾아간다는 것은 꿈에도 생각할 수 없는 일이다. 친구에게 편지를 한 통 빚지고 있다. 아마 잠자리에 들기 전에 쓸 수도 있고, 내일 아침까지 미룰 수도 있겠다. 우정의 편지는 영감이 떠오를 때가 아니면 결코 써서는 안 된다. 나는 아직 신문을 보지 않았다. 보통 나는 산책에서 지쳐 돌아올 때까지 신문을 남겨둔다. 그때 시끄러운 세상이 무엇을 하고 있는지 보는 것은 나를 즐겁게 한다. 아침의 가장 신선한 정신을 그토록 슬프고 어리석은 일들에 내어주기가 아깝다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>誰<rt>だれ</rt></ruby>かが<ruby>私<rt>わたし</rt></ruby>を<ruby>訪<rt>たず</rt></ruby>ねてくる<ruby>可能<rt>かのう</rt></ruby><ruby>性<rt>せい</rt></ruby>は<ruby>全<rt>まった</rt></ruby>くなく、<ruby>私<rt>わたし</rt></ruby>が<ruby>誰<rt>だれ</rt></ruby>か<ruby>他者<rt>たしゃ</rt></ruby>を<ruby>訪<rt>たず</rt></ruby>ねるなどということは<ruby>夢<rt>ゆめ</rt></ruby>にも<ruby>思<rt>おも</rt></ruby>わぬことだ。<ruby>友人<rt>ゆうじん</rt></ruby>への<ruby>手紙<rt>てがみ</rt></ruby>を<ruby>書<rt>か</rt></ruby>かなければならない。おそらく<ruby>寝<rt>ね</rt></ruby>る<ruby>前<rt>まえ</rt></ruby>に<ruby>書<rt>か</rt></ruby>くだろうし、あるいは<ruby>明日<rt>あした</rt></ruby>の<ruby>朝<rt>あさ</rt></ruby>まで<ruby>残<rt>のこ</rt></ruby>しておくかもしれない。<ruby>友情<rt>ゆうじょう</rt></ruby>の<ruby>手紙<rt>てがみ</rt></ruby>は、<ruby>心<rt>こころ</rt></ruby>が<ruby>動<rt>うご</rt></ruby>かされる<ruby>時<rt>とき</rt></ruby>でなければ<ruby>決<rt>けっ</rt></ruby>して<ruby>書<rt>か</rt></ruby>くべきではない。<ruby>私<rt>わたし</rt></ruby>はまだ<ruby>新聞<rt>しんぶん</rt></ruby>を<ruby>見<rt>み</rt></ruby>ていない。<ruby>大抵<rt>たいてい</rt></ruby>は、<ruby>散歩<rt>さんぽ</rt></ruby>から<ruby>疲<rt>つか</rt></ruby>れて<ruby>帰<rt>かえ</rt></ruby>ってくるまで<ruby>新聞<rt>しんぶん</rt></ruby>は<ruby>放<rt>ほう</rt></ruby>っておく。その<ruby>時<rt>とき</rt></ruby>に、<ruby>騒<rt>さわ</rt></ruby>がしい<ruby>世間<rt>せけん</rt></ruby>が<ruby>何<rt>なに</rt></ruby>をしているかを<ruby>見<rt>み</rt></ruby>るのが<ruby>面白<rt>おもしろ</rt></ruby>いのだ。<ruby>朝<rt>あさ</rt></ruby>の<ruby>一番<rt>いちばん</rt></ruby><ruby>新鮮<rt>しんせん</rt></ruby>な<ruby>精神<rt>せいしん</rt></ruby>を、これほど<ruby>悲<rt>かな</rt></ruby>しく<ruby>愚<rt>おろ</rt></ruby>かな<ruby>物事<rt>ものごと</rt></ruby>に<ruby>与<rt>あた</rt></ruby>えるのは<ruby>惜<rt>お</rt></ruby>しい<ruby>気<rt>き</rt></ruby>がする。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

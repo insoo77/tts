@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albert Einstein: I Believe | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Albert Einstein: I Believe</h1>
+            <h2>내가 믿는 것 (私が信じること)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>Strange is our situation here upon earth. Each of us comes for a short visit, not knowing why, yet sometimes seeming to divine a purpose. From the standpoint of daily life, however, there is one thing we do know: that man is here for the sake of other men—above all for those upon whose smile and well-being our own happiness depends, and also for the countless unknown souls with whose fate we are connected by a bond of sympathy.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>이 지상에서의 우리의 처지는 기묘합니다. 우리 각자는 이유도 모른 채 짧은 방문을 위해 이곳에 오지만, 때로는 어떤 목적을 어렴풋이 짐작하는 것 같습니다. 그러나 일상생활의 관점에서 볼 때, 우리가 아는 한 가지가 있습니다. 그것은 바로 인간이 다른 인간을 위해 이곳에 있다는 것입니다. 무엇보다도 그들의 미소와 안녕에 우리의 행복이 달려있는 사람들을 위해, 그리고 또한 동정심이라는 유대로 그 운명이 우리와 연결된 수많은 미지의 영혼들을 위해 존재합니다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>奇妙<rt>きみょう</rt></ruby>なものです、この<ruby>地上<rt>ちじょう</rt></ruby>における<ruby>私<rt>わたし</rt></ruby>たちの<ruby>状況<rt>じょうきょう</rt></ruby>は。<ruby>私<rt>わたし</rt></ruby>たち<ruby>一人一人<rt>ひとりひとり</rt></ruby>は、<ruby>理由<rt>りゆう</rt></ruby>も<ruby>知<rt>し</rt></ruby>らずに<ruby>短<rt>みじか</rt></ruby>い<ruby>訪問<rt>ほうもん</rt></ruby>のためにやって<ruby>来<rt>き</rt></ruby>ますが、それでも<ruby>時<rt>とき</rt></ruby>にはある<ruby>目的<rt>もくてき</rt></ruby>を<ruby>見抜<rt>みぬ</rt></ruby>いているように<ruby>思<rt>おも</rt></ruby>えます。<ruby>日常<rt>にちじょう</rt></ruby><ruby>生活<rt>せいかつ</rt></ruby>の<ruby>観点<rt>かんてん</rt></ruby>からすれば、しかし、<ruby>私<rt>わたし</rt></ruby>たちが<ruby>知<rt>し</rt></ruby>っていることが<ruby>一<rt>ひと</rt></ruby>つあります。それは、<ruby>人間<rt>にんげん</rt></ruby>が<ruby>他<rt>ほか</rt></ruby>の<ruby>人々<rt>ひとびと</rt></ruby>のためにここにいるということです—<ruby>何<rt>なに</rt></ruby>よりもまず、その<ruby>笑顔<rt>えがお</rt></ruby>と<ruby>幸福<rt>こうふく</rt></ruby>に<ruby>私<rt>わたし</rt></ruby>たち<ruby>自身<rt>じしん</rt></ruby>の<ruby>幸<rt>しあわ</rt></ruby>せが<ruby>かかっている<rt>かかっている</rt></ruby><ruby>人<rt>ひと</rt></ruby>たちのために、そしてまた、その<ruby>運命<rt>うんめい</rt></ruby>が<ruby>同情<rt>どうじょう</rt></ruby>という<ruby>絆<rt>きずな</rt></ruby>で<ruby>私<rt>わたし</rt></ruby>たちと<ruby>結<rt>むす</rt></ruby>ばれている<ruby>無数<rt>むすう</rt></ruby>の<ruby>未知<rt>みち</rt></ruby>の<ruby>魂<rt>たましい</rt></ruby>たちのために。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

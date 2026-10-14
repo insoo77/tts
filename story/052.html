@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ernest Hemingway: The Old Man and the Sea | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Ernest Hemingway: The Old Man and the Sea</h1>
+            <h2>노인과 바다 (老人と海)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>He was an old man who fished alone in a skiff in the Gulf Stream and he had gone eighty four days now without taking a fish. In the first forty days a boy had been with him. But after forty days without a fish the boy's parents had told him that the old man was now definitely and finally salao, which is the worst form of unlucky, and the boy had gone at their orders in another boat which caught three good fish the first week. It made the boy sad to see the old man come in each day with his skiff empty and he always went down to help him carry either the coiled lines or the gaff and harpoon and the sail that was furled around the mast. The sail was patched with flour sacks and, furled, it looked like the flag of permanent defeat.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>그는 멕시코 만류에서 조각배를 타고 홀로 낚시하는 노인이었고, 고기를 한 마리도 낚지 못한 채 벌써 84일이 지났다. 처음 40일 동안은 한 소년이 그와 함께 있었다. 하지만 40일이 지나도록 고기를 잡지 못하자 소년의 부모는 노인이 이제 완전히 '살라오', 즉 최악의 불운에 빠졌다고 말했고, 소년은 그들의 명령에 따라 다른 배로 옮겨가 첫 주에 좋은 고기를 세 마리나 잡았다. 소년은 노인이 매일 빈 배로 들어오는 것을 보는 것이 슬펐고, 그는 항상 내려가서 노인이 똬리 튼 낚싯줄이나 갈고리와 작살, 그리고 돛대에 감긴 돛을 나르는 것을 도왔다. 그 돛은 밀가루 포대로 기워져 있었고, 말아 올렸을 때 그것은 영원한 패배의 깃발처럼 보였다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>彼<rt>かれ</rt></ruby>はメキシコ<ruby>湾流<rt>わんりゅう</rt></ruby>で<ruby>小舟<rt>こぶね</rt></ruby>に<ruby>乗<rt>の</rt></ruby>り、<ruby>一人<rt>ひとり</rt></ruby>で<ruby>漁<rt>りょう</rt></ruby>をする<ruby>老人<rt>ろうじん</rt></ruby>で、<ruby>魚<rt>さかな</rt></ruby>を<ruby>一<rt>いっ</rt></ruby><ruby>匹<rt>ぴき</rt></ruby>も<ruby>釣<rt>つ</rt></ruby>れないまま<ruby>八十四<rt>はちじゅうよっ</rt></ruby><ruby>日間<rt>かかん</rt></ruby>が<ruby>過<rt>す</rt></ruby>ぎていた。<ruby>最初<rt>さいしょ</rt></ruby>の<ruby>四十<rt>よんじゅう</rt></ruby><ruby>日間<rt>かかん</rt></ruby>は<ruby>一<rt>ひと</rt></ruby>りの<ruby>少年<rt>しょうねん</rt></ruby>が<ruby>彼<rt>かれ</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>だった。しかし<ruby>四十<rt>よんじゅう</rt></ruby><ruby>日<rt>にち</rt></ruby>も<ruby>魚<rt>さかな</rt></ruby>が<ruby>釣<rt>つ</rt></ruby>れないと、<ruby>少年<rt>しょうねん</rt></ruby>の<ruby>両親<rt>りょうしん</rt></ruby>は<ruby>老人<rt>ろうじん</rt></ruby>がもはや<ruby>完全<rt>かんぜん</rt></ruby>にかつ<ruby>最終<rt>さいしゅう</rt></ruby><ruby>的<rt>てき</rt></ruby>にサラオ、すなわち<ruby>最悪<rt>さいあく</rt></ruby>の<ruby>不運<rt>ふうん</rt></ruby>なのだと<ruby>言<rt>い</rt></ruby>い、<ruby>少年<rt>しょうねん</rt></ruby>は<ruby>彼<rt>かれ</rt></ruby>らの<ruby>命令<rt>めいれい</rt></ruby>で<ruby>別<rt>べつ</rt></ruby>の<ruby>船<rt>ふね</rt></ruby>に<ruby>乗<rt>の</rt></ruby>り、その<ruby>船<rt>ふね</rt></ruby>では<ruby>最初<rt>さいしょ</rt></ruby>の<ruby>一<rt>いっ</rt></ruby><ruby>週間<rt>しゅうかん</rt></ruby>で<ruby>三<rt>さん</rt></ruby><ruby>匹<rt>びき</rt></ruby>の<ruby>良<rt>よ</rt></ruby>い<ruby>魚<rt>さかな</rt></ruby>を<ruby>釣<rt>つ</rt></ruby>り<ruby>上<rt>あ</rt></ruby>げた。<ruby>少年<rt>しょうねん</rt></ruby>は、<ruby>老人<rt>ろうじん</rt></ruby>が<ruby>毎日<rt>まいにち</rt></ruby><ruby>空<rt>から</rt></ruby>の<ruby>小舟<rt>こぶね</rt></ruby>で<ruby>帰<rt>かえ</rt></ruby>ってくるのを<ruby>見<rt>み</rt></ruby>て<ruby>悲<rt>かな</rt></ruby>しくなり、いつも<ruby>下<rt>お</rt></ruby>りて<ruby>行<rt>い</rt></ruby>って、<ruby>巻<rt>ま</rt></ruby>かれた<ruby>釣<rt>つ</rt></ruby>り<ruby>糸<rt>いと</rt></ruby>や、<ruby>手鉤<rt>てかぎ</rt></ruby>と<ruby>銛<rt>もり</rt></ruby>、そしてマストに<ruby>巻<rt>ま</rt></ruby>き<ruby>付<rt>つ</rt></ruby>けられた<ruby>帆<rt>ほ</rt></ruby>を<ruby>運<rt>はこ</rt></ruby>ぶのを<ruby>手伝<rt>てつだ</rt></ruby>った。その<ruby>帆<rt>ほ</rt></ruby>は<ruby>小麦粉<rt>こむぎこ</rt></ruby>の<ruby>袋<rt>ふくろ</rt></ruby>で<ruby>継<rt>つ</rt></ruby>ぎ<ruby>当<rt>あ</rt></ruby>てされており、<ruby>巻<rt>ま</rt></ruby>き<ruby>上<rt>あ</rt></ruby>げられると、<ruby>永遠<rt>えいえん</rt></ruby>の<ruby>敗北<rt>はいぼく</rt></ruby>の<ruby>旗<rt>はた</rt></ruby>のように<ruby>見<rt>み</rt></ruby>えた。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W. H. Hudson: Far Away and Long Ago | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>W. H. Hudson: Far Away and Long Ago</h1>
+            <h2>머나먼 곳 그리고 오래 전 (遥かな昔、遠い場所)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>Very, very early in my boyhood I had acquired the habit of going about alone to amuse myself in my own way, and it was only after years, when my age was about twelve, that my mother told me how anxious this singularity in me used to make her. She would miss me when looking out to see what the children were doing, and I would be called and searched for, to be found hidden away somewhere in the plantation.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>아주, 아주 어린 소년 시절에 나는 나만의 방식으로 혼자 돌아다니며 즐기는 습관을 들였다. 그리고 내 나이가 열두 살쯤 되었을 때, 몇 년이 지나서야 어머니는 나의 이런 특이함이 그녀를 얼마나 불안하게 만들었는지 말씀해주셨다. 그녀는 아이들이 무엇을 하고 있는지 내다보실 때면 나를 그리워하셨고, 나는 불려지고 수색되곤 했는데, 결국 농장 어딘가에 숨어 있는 채로 발견되곤 했다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>私<rt>わたし</rt></ruby>の<ruby>少年<rt>しょうねん</rt></ruby><ruby>時代<rt>じだい</rt></ruby>の<ruby>非常<rt>ひじょう</rt></ruby>に<ruby>早<rt>はや</rt></ruby>い<ruby>時期<rt>じき</rt></ruby>に、<ruby>私<rt>わたし</rt></ruby>は<ruby>自分<rt>じぶん</rt></ruby><ruby>自身<rt>じしん</rt></ruby>のやり<ruby>方<rt>かた</rt></ruby>で<ruby>一人<rt>ひとり</rt></ruby>で<ruby>歩<rt>ある</rt></ruby>き<ruby>回<rt>まわ</rt></ruby>って<ruby>楽<rt>たの</rt></ruby>しむ<ruby>習慣<rt>しゅうかん</rt></ruby>を<ruby>身<rt>み</rt></ruby>につけていました。そして、<ruby>何<rt>なん</rt></ruby><ruby>年<rt>ねん</rt></ruby>も<ruby>経<rt>た</rt></ruby>って、<ruby>私<rt>わたし</rt></ruby>の<ruby>年齢<rt>ねんれい</rt></ruby>が<ruby>十二<rt>じゅうに</rt></ruby><ruby>歳<rt>さい</rt></ruby>ぐらいになったとき、<ruby>母<rt>はは</rt></ruby>は<ruby>私<rt>わたし</rt></ruby>のこの<ruby>特異<rt>とくい</rt></ruby><ruby>性<rt>せい</rt></ruby>が<ruby>彼女<rt>かのじょ</rt></ruby>をどれほど<ruby>心配<rt>しんぱい</rt></ruby>させたかを<ruby>私<rt>わたし</rt></ruby>に<ruby>話<rt>はな</rt></ruby>してくれました。<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>子供<rt>こども</rt></ruby>たちが<ruby>何<rt>なに</rt></ruby>をしているかを<ruby>見<rt>み</rt></ruby>ようと<ruby>外<rt>そと</rt></ruby>を<ruby>眺<rt>なが</rt></ruby>めるとき、<ruby>私<rt>わたし</rt></ruby>がいなくて<ruby>寂<rt>さび</rt></ruby>しく<ruby>思<rt>おも</rt></ruby>い、<ruby>私<rt>わたし</rt></ruby>は<ruby>呼<rt>よ</rt></ruby>ばれたり<ruby>探<rt>さが</rt></ruby>されたりして、<ruby>結局<rt>けっきょく</rt></ruby>は<ruby>農園<rt>のうえん</rt></ruby>のどこかに<ruby>隠<rt>かく</rt></ruby>れているところを<ruby>見<rt>み</rt></ruby>つけられるのでした。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

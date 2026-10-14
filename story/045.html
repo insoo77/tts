@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aldous L. Huxley: Ends and Means | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Aldous L. Huxley: Ends and Means</h1>
+            <h2>목적과 수단 (目的と手段)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>For a majority of people in the West, purposeless reading, purposeless listening-in, purposeless looking at films have become addictions, psychological equivalents of an alcoholism and morphinism. Things have come to such a pitch that there are many millions of men and women who suffer real distress if they are cut off for a few days or even a few hours from newspapers, radio, music, moving pictures. Like the addict to a drug, they have to indulge their vice, not because the indulgence gives them any active pleasure, but because, unless they indulge, they feel painfully subnormal and incomplete.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>서구의 대다수 사람들에게 목적 없는 독서, 목적 없는 청취, 목적 없는 영화 감상은 알코올 중독이나 모르핀 중독과 심리적으로 동등한 중독이 되어버렸다. 상황은 수백만의 남성과 여성이 신문, 라디오, 음악, 영화로부터 며칠 혹은 단 몇 시간이라도 단절되면 실질적인 고통을 겪는 지경에 이르렀다. 마약 중독자처럼, 그들은 자신의 악습에 빠져들어야만 한다. 그 탐닉이 어떤 적극적인 즐거움을 주기 때문이 아니라, 탐닉하지 않으면 고통스러울 정도로 비정상적이고 불완전하다고 느끼기 때문이다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>西洋<rt>せいよう</rt></ruby>の<ruby>大多数<rt>だいたすう</rt></ruby>の<ruby>人々<rt>ひとびと</rt></ruby>にとって、<ruby>目的<rt>もくてき</rt></ruby>のない<ruby>読書<rt>どくしょ</rt></ruby>、<ruby>目的<rt>もくてき</rt></ruby>のない<ruby>聴取<rt>ちょうしゅ</rt></ruby>、<ruby>目的<rt>もくてき</rt></ruby>のない<ruby>映画<rt>えいが</rt></ruby><ruby>鑑賞<rt>かんしょう</rt></ruby>は、アルコール<ruby>中毒<rt>ちゅうどく</rt></ruby>やモルヒネ<ruby>中毒<rt>ちゅうどく</rt></ruby>と<ruby>心理<rt>しんり</rt></ruby><ruby>的<rt>てき</rt></ruby>に<ruby>同等<rt>どうとう</rt></ruby>の<ruby>依存症<rt>いぞんしょう</rt></ruby>となってしまった。<ruby>事態<rt>じたい</rt></ruby>は、<ruby>何百万<rt>なんびゃくまん</rt></ruby>という<ruby>男女<rt>だんじょ</rt></ruby>が<ruby>新聞<rt>しんぶん</rt></ruby>、ラジオ、<ruby>音楽<rt>おんがく</rt></ruby>、<ruby>映画<rt>えいが</rt></ruby>から<ruby>数日<rt>すうじつ</rt></ruby>あるいは<ruby>数時間<rt>すうじかん</rt></ruby>でも<ruby>遮断<rt>しゃだん</rt></ruby>されると、<ruby>実際<rt>じっさい</rt></ruby>の<ruby>苦痛<rt>くつう</rt></ruby>を<ruby>感<rt>かん</rt></ruby>じるほどの<ruby>状況<rt>じょうきょう</rt></ruby>にまで<ruby>達<rt>たっ</rt></ruby>している。<ruby>麻薬<rt>まやく</rt></ruby><ruby>中毒者<rt>ちゅうどくしゃ</rt></ruby>のように、<ruby>彼<rt>かれ</rt></ruby>らは<ruby>自<rt>みずか</rt></ruby>らの<ruby>悪癖<rt>あくへき</rt></ruby>に<ruby>耽<rt>ふけ</rt></ruby>らなければならない。その<ruby>耽溺<rt>たんでき</rt></ruby>が<ruby>何<rt>なん</rt></ruby>らかの<ruby>積極<rt>せっきょく</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>快楽<rt>かいらく</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えるからではなく、それに<ruby>耽<rt>ふけ</rt></ruby>らなければ、<ruby>痛<rt>いた</rt></ruby>ましいほどに<ruby>異常<rt>いじょう</rt></ruby>で<ruby>不完全<rt>ふかんぜん</rt></ruby>だと<ruby>感<rt>かん</r></ruby>じるからである。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

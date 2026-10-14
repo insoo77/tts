@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graham Greene: The Lost Childhood | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Graham Greene: The Lost Childhood</h1>
+            <h2>잃어버린 어린 시절 (失われた子供時代)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>Perhaps it is only in childhood that books have any deep influence in our lives. In later life we admire, we are entertained, we may modify some views we already hold, but we are more likely to find in books merely a confirmation of what is in our minds already. But in childhood all books are books of divination, telling us about the future, and like the fortune teller who sees a long journey in the cards they influence the future.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>아마도 책이 우리 삶에 깊은 영향을 미치는 것은 어린 시절뿐일 것이다. 나이가 들어서는 감탄하고, 즐거움을 얻고, 이미 가지고 있던 견해를 일부 수정할 수는 있지만, 책 속에서 이미 우리 마음속에 있는 것을 단순히 확인하는 데 그칠 가능성이 더 높다. 그러나 어린 시절의 모든 책은 미래에 대해 알려주는 점술 책과 같으며, 카드에서 긴 여정을 보는 점쟁이처럼 미래에 영향을 미친다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p>おそらく、<ruby>本<rt>ほん</rt></ruby>が<ruby>私<rt>わたし</rt></ruby>たちの<ruby>人生<rt>じんせい</rt></ruby>に<ruby>深<rt>ふか</rt></ruby>い<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えるのは<ruby>子供<rt>こども</rt></ruby><ruby>時代<rt>じだい</rt></ruby>だけだろう。<ruby>後年<rt>こうねん</rt></ruby>になると、<ruby>私<rt>わたし</rt></ruby>たちは<ruby>感心<rt>かんしん</rt></ruby>し、<ruby>楽<rt>たの</rt></ruby>しまされ、すでに<ruby>持<rt>も</rt></ruby>っている<ruby>見解<rt>けんかい</rt></ruby>を<ruby>修正<rt>しゅうせい</rt></ruby>することもあるかもしれないが、<ruby>本<rt>ほん</rt></ruby>の<ruby>中<rt>なか</rt></ruby>にはすでに<ruby>心<rt>こころ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>にあることの<ruby>単<rt>たん</rt></ruby>なる<ruby>確認<rt>かくにん</rt></ruby>を<ruby>見出<rt>みいだ</rt></ruby>す<ruby>可能性<rt>かのうせい</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>が<ruby>高<rt>たか</rt></ruby>い。しかし、<ruby>子供<rt>こども</rt></ruby><ruby>時代<rt>じだい</rt></ruby>のすべての<ruby>本<rt>ほん</rt></ruby>は、<ruby>未来<rt>みらい</rt></ruby>について<ruby>教<rt>おし</rt></ruby>えてくれる<ruby>占<rt>うらな</rt></ruby>いの<ruby>本<rt>ほん</rt></ruby>であり、カードの<ruby>中<rt>なか</rt></ruby>に<ruby>長<rt>なが</rt></ruby>い<ruby>旅路<rt>たびじ</rt></ruby>を<ruby>見<rt>み</rt></ruby>る<ruby>占<rt>うらな</rt></ruby>い<ruby>師<rt>し</rt></ruby>のように、<ruby>未来<rt>みらい</rt></ruby>に<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えるのである。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

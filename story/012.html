@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John B. Bury: A History of Freedom of Thought | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>John B. Bury: A History of Freedom of Thought</h1>
+            <h2>사상 자유의 역사 (思想の自由の歴史)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>At present, in the most civilized countries, freedom of speech is taken as a matter of course and seems a perfectly simple thing. We are so accustomed to it that we look on it as a natural right. But this right has been acquired only in quite recent times, and the way to its attainment has lain through lakes of blood. It has taken centuries to persuade the most civilized peoples that liberty to publish one's opinions and to discuss all questions is a good and not a bad thing.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>현재 가장 문명화된 나라들에서는 언론의 자유가 당연한 것으로 여겨지며, 완벽하게 단순한 것처럼 보인다. 우리는 그것에 너무 익숙해져서 그것을 자연권으로 간주한다. 그러나 이 권리는 아주 최근에야 획득되었으며, 그 성취에 이르는 길은 피의 호수를 거쳐왔다. 자신의 의견을 발표하고 모든 문제를 토론할 자유가 나쁜 것이 아니라 좋은 것이라고 가장 문명화된 민족들을 설득하는 데 수세기가 걸렸다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>現在<rt>げんざい</rt></ruby>、<ruby>最<rt>もっと</rt></ruby>も<ruby>文明<rt>ぶんめい</rt></ruby><ruby>化<rt>か</rt></ruby>された<ruby>国々<rt>くにぐに</rt></ruby>では、<ruby>言論<rt>げんろん</rt></ruby>の<ruby>自由<rt>じゆう</rt></ruby>は<ruby>当然<rt>とうぜん</rt></ruby>のことと<ruby>見<rt>み</rt></ruby>なされ、<ruby>完全<rt>かんぜん</rt></ruby>に<ruby>単純<rt>たんじゅん</rt></ruby>なことのように<ruby>思<rt>おも</rt></ruby>われる。<ruby>我々<rt>われわれ</rt></ruby>はそれにあまりにも<ruby>慣<rt>な</rt></ruby>れているため、それを<ruby>自然<rt>しぜん</rt></ruby><ruby>権<rt>けん</rt></ruby>と<ruby>見<rt>み</rt></ruby>なしている。しかし、この<ruby>権利<rt>けんり</rt></ruby>はごく<ruby>最近<rt>さいきん</rt></ruby>になってようやく<ruby>獲得<rt>かくとく</rt></ruby>されたものであり、その<ruby>達成<rt>たっせい</rt></ruby>への<ruby>道<rt>みち</rt></ruby>は<ruby>血<rt>ち</rt></ruby>の<ruby>湖<rt>みずうみ</rt></ruby>を<ruby>経<rt>へ</rt></ruby>てきた。<ruby>自分<rt>じぶん</rt></ruby>の<ruby>意見<rt>いけん</rt></ruby>を<ruby>発表<rt>はっぴょう</rt></ruby>し、すべての<ruby>問題<rt>もんだい</rt></ruby>を<ruby>議論<rt>ぎろん</rt></ruby>する<ruby>自由<rt>じゆう</rt></ruby>が<ruby>悪<rt>わる</rt></ruby>いことではなく<ruby>良<rt>よ</rt></ruby>いことであると、<ruby>最<rt>もっと</rt></ruby>も<ruby>文明<rt>ぶんめい</rt></ruby><ruby>化<rt>か</rt></ruby>された<ruby>人々<rt>ひとびと</rt></ruby>を<ruby>説得<rt>せっとく</rt></ruby>するのに<ruby>何世紀<rt>なんせいき</rt></ruby>もかかった。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

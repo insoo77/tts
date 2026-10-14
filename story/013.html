@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julian S. Huxley: Evolutionary Humanism | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Julian S. Huxley: Evolutionary Humanism</h1>
+            <h2>진화적 인본주의 (進化的ヒューマニズム)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>In its recent manifestations, Western civilization has tended to exalt science and its technological applications at the expense of the arts. But we can grasp how important and indispensable they really are by imagining a world without them. Think of a world without music or poetry, without its churches and noble houses, without ballets, plays, novels, and films, without pictures and sculptures: such a world would be intolerable, and life in it unlivable.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>최근의 양상에서 서구 문명은 예술을 희생시키면서 과학과 그 기술적 응용을 찬양하는 경향이 있었다. 그러나 우리는 그것들이 없는 세상을 상상함으로써 그것들이 실제로 얼마나 중요하고 필수적인지를 파악할 수 있다. 음악이나 시가 없는 세상, 교회와 귀족의 저택이 없는 세상, 발레, 연극, 소설, 영화가 없는 세상, 그림과 조각이 없는 세상을 생각해 보라. 그러한 세상은 견딜 수 없을 것이며, 그 안의 삶은 살 수 없을 것이다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p>その<ruby>最近<rt>さいきん</rt></ruby>の<ruby>現<rt>あらわ</rt></ruby>れにおいて、<ruby>西洋<rt>せいよう</rt></ruby><ruby>文明<rt>ぶんめい</rt></ruby>は<ruby>芸術<rt>げいじゅつ</rt></ruby>を<ruby>犠牲<rt>ぎせい</rt></ruby>にして<ruby>科学<rt>かがく</rt></ruby>とその<ruby>技術<rt>ぎじゅつ</rt></ruby><ruby>的<rt>てき</rt></ruby><ruby>応用<rt>おうよう</rt></ruby>を<ruby>称賛<rt>しょうさん</rt></ruby>する<ruby>傾向<rt>けいこう</rt></ruby>があった。しかし、<ruby>私<rt>わたし</rt></ruby>たちはそれらのない<ruby>世界<rt>せかい</rt></ruby>を<ruby>想像<rt>そうぞう</rt></ruby>することによって、それらが<ruby>実<rt>じつ</rt></ruby>にどれほど<ruby>重要<rt>じゅうよう</rt></ruby>で<ruby>不可欠<rt>ふかけつ</rt></ruby>であるかを<ruby>把握<rt>はあく</rt></ruby>することができる。<ruby>音楽<rt>おんがく</rt></ruby>や<ruby>詩<rt>し</rt></ruby>のない<ruby>世界<rt>せかい</rt></ruby>、その<ruby>教会<rt>きょうかい</rt></ruby>や<ruby>高貴<rt>こうき</rt></ruby>な<ruby>邸宅<rt>ていたく</rt></ruby>のない<ruby>世界<rt>せかい</rt></ruby>、バレエ、<ruby>演劇<rt>えんげき</rt></ruby>、<ruby>小説<rt>しょうせつ</rt></ruby>、<ruby>映画<rt>えいが</rt></ruby>のない<ruby>世界<rt>せかい</rt></ruby>、<ruby>絵画<rt>かいが</rt></ruby>や<ruby>彫刻<rt>ちょうこく</rt></ruby>のない<ruby>世界<rt>せかい</rt></ruby>を<ruby>考<rt>かんが</rt></ruby>えてみてほしい。そのような<ruby>世界<rt>せかい</rt></ruby>は<ruby>耐<rt>た</rt></ruby>え<ruby>難<rt>がた</rt></ruby>く、その<ruby>中<rt>なか</rt></ruby>での<ruby>生活<rt>せいかつ</rt></ruby>は<ruby>耐<rt>た</rt></ruby>えられないものだろう。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

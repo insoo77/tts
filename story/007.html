@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Steinbeck: Travels with Charley | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>John Steinbeck: Travels with Charley</h1>
+            <h2>찰리와 함께한 여행 (チャーリーとの旅)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>When I was very young and the urge to be someplace else was on me, I was assured by mature people that maturity would cure this itch. When years described me as mature, the remedy prescribed was middle age. In middle age I was assured that greater age would calm my fever and now that I am fifty-eight perhaps senility will do the job. Nothing has worked. I fear the disease is incurable.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>내가 아주 어렸을 때 어딘가 다른 곳으로 가고 싶은 충동에 사로잡히면, 어른들은 성숙해지면 그 가려움이 나을 것이라고 장담했다. 세월이 흘러 나를 성숙하다고 일컫게 되자, 처방된 치료법은 중년이었다. 중년이 되자 더 나이가 들면 내 열병이 가라앉을 것이라고들 했고, 이제 쉰여덟이 된 지금은 아마도 노쇠함이 그 일을 해낼지도 모르겠다. 아무것도 효과가 없었다. 이 병은 불치병인 것 같다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>私<rt>わたし</rt></ruby>が<ruby>非常<rt>ひじょう</rt></ruby>に<ruby>若<rt>わか</rt></ruby>く、どこか<ruby>別<rt>べつ</rt></ruby>の<ruby>場所<rt>ばしょ</rt></ruby>にいたいという<ruby>衝動<rt>しょうどう</rt></ruby>に<ruby>駆<rt>か</rt></ruby>られていたとき、<ruby>成熟<rt>せいじゅく</rt></ruby>した<ruby>人々<rt>ひとびと</rt></ruby>は、<ruby>成熟<rt>せいじゅく</rt></ruby>がこのかゆみを<ruby>治<rt>なお</rt></ruby>してくれると<ruby>私<rt>わたし</rt></ruby>に<ruby>請<rt>う</rt></ruby>け<ruby>合<rt>あ</rt></ruby>った。<ruby>年月<rt>ねんげつ</rt></ruby>が<ruby>私<rt>わたし</rt></ruby>を<ruby>成熟<rt>せいじゅく</rt></ruby>したと<ruby>評<rt>ひょう</rt></ruby>するようになると、<ruby>処方<rt>しょほう</rt></ruby>された<ruby>治療<rt>ちりょう</rt></ruby><ruby>法<rt>ほう</rt></ruby>は<ruby>中年<rt>ちゅうねん</rt></ruby>だった。<ruby>中年<rt>ちゅうねん</rt></ruby>になると、さらに<ruby>年<rt>とし</rt></ruby>を<ruby>重<rt>かさ</rt></ruby>ねれば<ruby>私<rt>わたし</rt></ruby>の<ruby>熱<rt>ねつ</rt></ruby>も<ruby>静<rt>しず</rt></ruby>まると<ruby>請<rt>う</rt></ruby>け<ruby>合<rt>あ</rt></ruby>われ、<ruby>今<rt>いま</rt></ruby>や<ruby>五十八<rt>ごじゅうはち</rt></ruby><ruby>歳<rt>さい</rt></ruby>になった<ruby>今<rt>いま</rt></ruby>、おそらく<ruby>老い<rt>おい</rt></ruby>がその<ruby>役目<rt>やくめ</rt></ruby>を<ruby>果<rt>は</rt></ruby>たすのだろう。<ruby>何<rt>なに</rt></ruby>も<ruby>効果<rt>こうか</rt></ruby>がなかった。<ruby>私<rt>わたし</rt></ruby>は、この<ruby>病<rt>やまい</rt></ruby>が<ruby>不治<rt>ふち</rt></ruby>の<ruby>病<rt>やまい</rt></ruby>ではないかと<ruby>恐<rt>おそ</rt></ruby>れている。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

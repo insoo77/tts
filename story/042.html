@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Smiles: Self-Help | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Samuel Smiles: Self-Help</h1>
+            <h2>자조론 (自助論)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>Fortune has often been blamed for her blindness; but fortune is not so blind as men are. Those who look into practical life will find that fortune is usually on the side of the industrious, as the winds and waves are on the side of the best navigators. In the pursuit of even the highest branches of human inquiry, the commoner qualities are found the most useful—such as common sense, attention, application, and perseverance. Genius may not be necessary, though even genius of the highest sort does not disdain the use of those ordinary qualities. The very greatest men have been among the least believers in the power of genius, and as worldly wise and persevering as successful men of the commoner sort. Some have even defined genius to be only common sense intensified.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>행운은 종종 그 맹목성 때문에 비난받아 왔지만, 행운은 인간만큼 맹목적이지는 않다. 실제적인 삶을 들여다보는 사람들은 바람과 파도가 최고의 항해사 편에 있듯이, 행운은 보통 근면한 사람들 편에 있다는 것을 알게 될 것이다. 인간 탐구의 가장 높은 분야를 추구하는 데 있어서도, 상식, 주의력, 응용력, 그리고 인내와 같은 평범한 자질들이 가장 유용한 것으로 밝혀진다. 천재성이 필요하지 않을 수도 있지만, 가장 뛰어난 종류의 천재조차도 그러한 평범한 자질들을 사용하는 것을 경멸하지 않는다. 가장 위대한 인물들은 천재의 힘을 가장 적게 믿는 사람들 중에 있었으며, 평범한 부류의 성공한 사람들처럼 세속적으로 현명하고 인내심이 강했다. 어떤 이들은 천재를 단지 강화된 상식일 뿐이라고 정의하기까지 했다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>幸運<rt>こううん</rt></ruby>はしばしばその<ruby>盲目<rt>もうもく</rt></ruby><ruby>性<rt>せい</rt></ruby>ゆえに<ruby>非難<rt>ひなん</rt></ruby>されてきたが、<ruby>幸運<rt>こううん</rt></ruby>は<ruby>人間<rt>にんげん</rt></ruby>ほど<ruby>盲目<rt>もうもく</rt></ruby>ではない。<ruby>実践<rt>じっせん</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>人生<rt>じんせい</rt></ruby>を<ruby>覗<rt>のぞ</rt></ruby>き<ruby>込<rt>こ</rt></ruby>む<ruby>者<rt>もの</rt></ruby>は、<ruby>風<rt>かぜ</rt></ruby>や<ruby>波<rt>なみ</rt></ruby>が<ruby>最良<rt>さいりょう</rt></ruby>の<ruby>航海士<rt>こうかいし</rt></ruby>の<ruby>側<rt>がわ</rt></ruby>にあるように、<ruby>幸運<rt>こううん</rt></ruby>は<ruby>通常<rt>つうじょう</rt></ruby>、<ruby>勤勉<rt>きんべん</rt></ruby>な<ruby>人々<rt>ひとびと</rt></ruby>の<ruby>側<rt>がわ</rt></ruby>にあることを<ruby>見<rt>み</rt></ruby>いだすだろう。<ruby>人間<rt>にんげん</rt></ruby>の<ruby>探求<rt>たんきゅう</rt></ruby>の<ruby>最<rt>もっと</rt></ruby>も<ruby>高<rt>たか</rt></ruby>い<ruby>分野<rt>ぶんや</rt></ruby>の<ruby>追求<rt>ついきゅう</rt></ruby>においてさえ、<ruby>常識<rt>じょうしき</rt></ruby>、<ruby>注意力<rt>ちゅういりょく</rt></ruby>、<ruby>応用力<rt>おうようりょく</rt></ruby>、そして<ruby>忍耐力<rt>にんたいりょく</rt></ruby>といったより<ruby>平凡<rt>へいぼん</rt></ruby>な<ruby>資質<rt>ししつ</rt></ruby>が<ruby>最<rt>もっと</rt></ruby>も<ruby>有用<rt>ゆうよう</rt></ruby>であることがわかる。<ruby>天才<rt>てんさい</rt></ruby>は<ruby>必要<rt>ひつよう</rt></ruby>ではないかもしれないが、<ruby>最高<rt>さいこう</rt></ruby>レベルの<ruby>天才<rt>てんさい</rt></ruby>でさえ、そうした<ruby>通常<rt>つうじょう</rt></ruby>の<ruby>資質<rt>ししつ</rt></ruby>の<ruby>使用<rt>しよう</rt></ruby>を<ruby>軽蔑<rt>けいべつ</rt></ruby>はしない。<ruby>最<rt>もっと</rt></ruby>も<ruby>偉大<rt>いだい</rt></ruby>な<ruby>人々<rt>ひとびと</rt></ruby>は、<ruby>天才<rt>てんさい</rt></ruby>の<ruby>力<rt>ちから</rt></ruby>をほとんど<ruby>信<rt>しん</rt></ruby>じない<ruby>者<rt>もの</rt></ruby>たちであり、<ruby>平凡<rt>へいぼん</rt></ruby>な<ruby>類<rt>たぐい</rt></ruby>の<ruby>成功者<rt>せいこうしゃ</rt></ruby>たちのように<ruby>世俗<rt>せぞく</rt></ruby><ruby>的<rt>てき</rt></ruby>に<ruby>賢<rt>かしこ</rt></ruby>く、<ruby>忍耐強<rt>にんたいづよ</rt></ruby>かった。<ruby>天才<rt>てんさい</rt></ruby>とは<ruby>単<rt>たん</rt></ruby>に<ruby>強化<rt>きょうか</rt></ruby>された<ruby>常識<rt>じょうしき</rt></ruby>にすぎないと<ruby>定義<rt>ていぎ</rt></ruby>した<ruby>者<rt>もの</rt></ruby>さえいる。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

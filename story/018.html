@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward M. Forster: What I Believe | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Edward M. Forster: What I Believe</h1>
+            <h2>내가 믿는 것 (私が信じるもの)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>The people I admire most are those who are sensitive and want to create something or discover something, and don't see life in terms of power, and such people get more of a chance under a democracy than elsewhere. They found religions, great or small, or they produce literature and art, or they do disinterested scientific research, or they may be what are called "ordinary people," who are creative in their private lives, bring up their children decently, for instance, or help their neighbors. All these people need to express themselves; they can't do so unless society allows them liberty to do so, and the society which is based on the belief that the state is more important than the individual will not allow them to do so.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>내가 가장 존경하는 사람들은 감수성이 예민하고 무언가를 창조하거나 발견하고자 하며, 삶을 권력의 관점에서 보지 않는 사람들이다. 그리고 그러한 사람들은 다른 곳보다 민주주의 하에서 더 많은 기회를 얻는다. 그들은 크고 작은 종교를 창시하거나, 문학과 예술을 창조하거나, 사심 없는 과학 연구를 하거나, 소위 '평범한 사람들'일 수도 있다. 이들은 사적인 삶에서 창의적이며, 예를 들어 자녀를 품위 있게 양육하거나 이웃을 돕는다. 이 모든 사람들은 자신을 표현할 필요가 있다. 사회가 그들에게 그렇게 할 자유를 허락하지 않는 한 그들은 그렇게 할 수 없으며, 국가가 개인보다 더 중요하다고 믿는 신념에 기반한 사회는 그들이 그렇게 하도록 허용하지 않을 것이다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>私<rt>わたし</rt></ruby>が<ruby>最<rt>もっと</rt></ruby>も<ruby>尊敬<rt>そんけい</rt></ruby>する<ruby>人々<rt>ひとびと</rt></ruby>は、<ruby>感受性<rt>かんじゅせい</rt></ruby>が<ruby>豊<rt>ゆた</rt></ruby>かで、<ruby>何<rt>なに</rt></ruby>かを<ruby>創造<rt>そうぞう</rt></ruby>したり<ruby>発見<rt>はっけん</rt></ruby>したりしたいと<ruby>願<rt>ねが</rt></ruby>い、<ruby>人生<rt>じんせい</rt></ruby>を<ruby>権力<rt>けんりょく</rt></ruby>の<ruby>観点<rt>かんてん</rt></ruby>から<ruby>見<rt>み</rt></ruby>ない<ruby>人々<rt>ひとびと</rt></ruby>です。そして、そのような<ruby>人々<rt>ひとびと</rt></ruby>は<ruby>他<rt>ほか</rt></ruby>のどこよりも<ruby>民主<rt>みんしゅ</rt></ruby><ruby>主義<rt>しゅぎ</rt></ruby>の<ruby>下<rt>もと</rt></ruby>でより<ruby>多<rt>おお</rt></ruby>くの<ruby>機会<rt>きかい</rt></ruby>を<ruby>得<rt>え</rt></ruby>ます。<ruby>彼<rt>かれ</rt></ruby>らは<ruby>大小<rt>だいしょう</rt></ruby>の<ruby>宗教<rt>しゅうきょう</rt></ruby>を<ruby>創始<rt>そうし</rt></ruby>したり、<ruby>文学<rt>ぶんがく</rt></ruby>や<ruby>芸術<rt>げいじゅつ</rt></ruby>を<ruby>生<rt>う</rt></ruby>み<ruby>出<rt>だ</rt></ruby>したり、<ruby>私心<rt>ししん</rt></ruby>のない<ruby>科学<rt>かがく</rt></ruby><ruby>研究<rt>けんきゅう</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>ったり、あるいは「<ruby>普通<rt>ふつう</rt></ruby>の<ruby>人々<rt>ひとびと</rt></ruby>」と<ruby>呼<rt>よ</rt></ruby>ばれる<ruby>人々<rt>ひとびと</rt></ruby>かもしれません。この<ruby>人<rt>ひと</rt></ruby>たちは<ruby>私生活<rt>しせいかつ</rt></ruby>において<ruby>創造<rt>そうぞう</rt></ruby><ruby>的<rt>てき</rt></ruby>であり、<ruby>例<rt>たと</rt></ruby>えば、<ruby>子供<rt>こども</rt></ruby>たちをきちんと<ruby>育<rt>そだ</rt></ruby>てたり、<ruby>隣人<rt>りんじん</rt></ruby>を<ruby>助<rt>たす</rt></ruby>けたりします。これらすべての<ruby>人々<rt>ひとびと</rt></ruby>は<ruby>自己<rt>じこ</rt></ruby>を<ruby>表現<rt>ひょうげん</rt></ruby>する<ruby>必要<rt>ひつよう</rt></ruby>があります。<ruby>社会<rt>しゃかい</rt></ruby>がそうする<ruby>自由<rt>じゆう</rt></ruby>を<ruby>許<rt>ゆる</rt></ruby>さない<ruby>限<rt>かぎ</rt></ruby>り<ruby>彼<rt>かれ</rt></ruby>らはそうすることはできず、<ruby>国家<rt>こっか</rt></ruby>が<ruby>個人<rt>こじん</rt></ruby>よりも<ruby>重要<rt>じゅうよう</rt></ruby>であるという<ruby>信念<rt>しんねん</rt></ruby>に<ruby>基<rt>もと</rt></ruby>づいた<ruby>社会<rt>しゃかい</rt></ruby>は、<ruby>彼<rt>かれ</rt></ruby>らがそうすることを<ruby>許<rt>ゆる</rt></ruby>さないでしょう。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

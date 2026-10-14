@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J. Lord Avebury: The Use of Life | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>J. Lord Avebury: The Use of Life</h1>
+            <h2>인생의 활용 (人生の活用)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>Books are to mankind what memory is to the individual. They contain the history of our race, the discoveries we have made, the accumulated knowledge and experience of ages: they picture for us the marvels and beauties of nature; help us in our difficulties, comfort us in sorrow and in suffering, change hours of ennui into moments of delight, store our minds with ideas, fill them with good and happy thoughts, which lift us out of and above ourselves.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>책은 개인에게 기억과 같은 존재이다. 그것들은 우리 인류의 역사, 우리가 이룬 발견들, 여러 시대에 걸쳐 축적된 지식과 경험을 담고 있다. 그것들은 우리에게 자연의 경이로움과 아름다움을 그려주고, 어려울 때 우리를 도와주며, 슬픔과 고통 속에서 우리를 위로하고, 권태의 시간을 기쁨의 순간으로 바꾸어주며, 우리 마음에 아이디어를 저장하고, 좋고 행복한 생각들로 채워주어, 우리를 우리 자신으로부터 벗어나 더 높은 곳으로 이끌어준다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>本<rt>ほん</rt></ruby>は<ruby>人類<rt>じんるい</rt></ruby>にとって、<ruby>個人<rt>こじん</rt></ruby>にとっての<ruby>記憶<rt>きおく</rt></ruby>のようなものである。それらは<ruby>我々<rt>われわれ</rt></ruby>の<ruby>種族<rt>しゅぞく</rt></ruby>の<ruby>歴史<rt>れきし</rt></ruby>、<ruby>我々<rt>われわれ</rt></ruby>がなしてきた<ruby>発見<rt>はっけん</rt></ruby>、<ruby>幾世代<rt>いくせだい</rt></ruby>にもわたる<ruby>蓄積<rt>ちくせき</rt></ruby>された<ruby>知識<rt>ちしき</rt></ruby>と<ruby>経験<rt>けいけん</rt></ruby>を<ruby>含<rt>ふく</rt></ruby>んでいる。それらは<ruby>我々<rt>われわれ</rt></ruby>に<ruby>自然<rt>しぜん</rt></ruby>の<ruby>驚異<rt>きょうい</rt></ruby>と<ruby>美<rt>うつく</rt></ruby>しさを<ruby>描<rt>えが</rt></ruby>き<ruby>出<rt>だ</rt></ruby>し、<ruby>困難<rt>こんなん</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で<ruby>我々<rt>われわれ</rt></ruby>を<ruby>助<rt>たす</rt></ruby>け、<ruby>悲<rt>かな</rt></ruby>しみと<ruby>苦<rt>くる</rt></ruby>しみの<ruby>中<rt>なか</rt></ruby>で<ruby>慰<rt>なぐさ</rt></ruby>め、<ruby>倦怠<rt>けんたい</rt></ruby>の<ruby>時間<rt>じかん</rt></ruby>を<ruby>喜<rt>よろこ</rt></ruby>びの<ruby>瞬間<rt>しゅんかん</rt></ruby>に<ruby>変<rt>か</rt></ruby>え、<ruby>心<rt>こころ</rt></ruby>にアイデアを<ruby>蓄<rt>たくわ</rt></ruby>え、<ruby>善<rt>よ</rt></ruby>き<ruby>幸<rt>しあわ</rt></ruby>せな<ruby>思<rt>おも</rt></ruby>いで<ruby>満<rt>み</rt></ruby>たし、<ruby>我々<rt>われわれ</rt></ruby>を<ruby>自己<rt>じこ</rt></ruby>から<ruby>抜<rt>ぬ</rt></ruby>け<ruby>出<rt>だ</rt></ruby>させ、さらにその<ruby>上<rt>うえ</rt></ruby>へと<ruby>引<rt>ひ</rt></ruby>き<ruby>上<rt>あ</rt></ruby>げてくれる。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

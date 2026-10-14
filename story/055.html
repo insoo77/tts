@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bertrand Russell: The Conquest of Happiness | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>Bertrand Russell: The Conquest of Happiness</h1>
+            <h2>행복의 정복 (幸福の征服)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>Envy is, of course, closely connected with competition. We do not envy a good fortune which we conceive as quite hopelessly out of reach. In an age when the social hierarchy is fixed, the lowest classes do not envy the upper classes so long as the division between rich and poor is thought to be ordained by God. Beggars do not envy millionaires, though of course they will envy other beggars who are more successful. The instability of social status in the modern world, and the egalitarian doctrines of democracy and socialism, have greatly extended the range of envy.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>질투는 물론 경쟁과 밀접하게 관련되어 있다. 우리는 도저히 손이 닿지 않을 것이라고 생각하는 행운은 질투하지 않는다. 사회 계층이 고정된 시대에는, 부자와 가난한 자 사이의 구분이 신에 의해 정해졌다고 생각되는 한 최하층 계급은 상류 계급을 질투하지 않는다. 거지는 백만장자를 질투하지 않지만, 물론 그들은 더 성공한 다른 거지는 질투할 것이다. 현대 사회의 사회적 지위의 불안정성, 그리고 민주주의와 사회주의의 평등주의적 원칙은 질투의 범위를 크게 확장시켰다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>嫉妬<rt>しっと</rt></ruby>は、もちろん、<ruby>競争<rt>きょうそう</rt></ruby>と<ruby>密接<rt>みっせつ</rt></ruby>に<ruby>関連<rt>かんれん</rt></ruby>している。<ruby>我々<rt>われわれ</rt></ruby>は<ruby>到底<rt>とうてい</rt></ruby><ruby>手<rt>て</rt></ruby>の<ruby>届<rt>とど</rt></ruby>かない<ruby>幸運<rt>こううん</rt></ruby>を<ruby>嫉妬<rt>しっと</rt></ruby>することはない。<ruby>社会<rt>しゃかい</rt></ruby><ruby>階層<rt>かいそう</rt></ruby>が<ruby>固定<rt>こてい</rt></ruby>されている<ruby>時代<rt>じだい</rt></ruby>には、<ruby>富<rt>と</rt></ruby>める<ruby>者<rt>もの</rt></ruby>と<ruby>貧<rt>まず</rt></ruby>しい<ruby>者<rt>もの</rt></ruby>との<ruby>区別<rt>くべつ</rt></ruby>が<ruby>神<rt>かみ</rt></ruby>によって<ruby>定<rt>さだ</rt></ruby>められたものだと<ruby>考<rt>かんが</rt></ruby>えられている<ruby>限<rt>かぎ</rt></ruby>り、<ruby>最下層<rt>さいかそう</rt></ruby>の<ruby>階級<rt>かいきゅう</rt></ruby>は<ruby>上流<rt>じょうりゅう</rt></ruby><ruby>階級<rt>かいきゅう</rt></ruby>を<ruby>嫉妬<rt>しっと</rt></ruby>しない。<ruby>乞食<rt>こじき</rt></ruby>は<ruby>百万長者<rt>ひゃくまんちょうじゃ</rt></ruby>を<ruby>嫉妬<rt>しっと</rt></ruby>しないが、もちろん<ruby>彼<rt>かれ</rt></ruby>らはより<ruby>成功<rt>せいこう</rt></ruby>した<ruby>他<rt>ほか</rt></ruby>の<ruby>乞食<rt>こじき</rt></ruby>を<ruby>嫉妬<rt>しっと</rt></ruby>するだろう。<ruby>現代<rt>げんだい</rt></ruby><ruby>社会<rt>しゃかい</rt></ruby>における<ruby>社会<rt>しゃかい</rt></ruby><ruby>的<rt>てき</rt></ruby><ruby>地位<rt>ちい</rt></ruby>の<ruby>不安定<rt>ふあんてい</rt></ruby>さ、そして<ruby>民主<rt>みんしゅ</rt></ruby><ruby>主義<rt>しゅぎ</rt></ruby>と<ruby>社会<rt>しゃかい</rt></ruby><ruby>主義<rt>しゅぎ</rt></ruby>の<ruby>平等<rt>びょうどう</rt></ruby><ruby>主義<rt>しゅぎ</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>教義<rt>きょうぎ</rt></ruby>は、<ruby>嫉妬<rt>しっと</rt></ruby>の<ruby>範囲<rt>はんい</rt></ruby>を<ruby>大<rt>おお</rt></ruby>いに<ruby>広<rt>ひろ</rt></ruby>げた。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>

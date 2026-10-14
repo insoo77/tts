@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G. Gissing: The Private Papers of Henry Ryecroft | 다국어 TTS 학습</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .text-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .text-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .lang-label {
+            font-weight: bold;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        ruby { ruby-position: over; }
+        rt {
+            font-size: 0.7em;
+            color: #666;
+            font-weight: normal;
+            user-select: none;
+        }
+        .controls { display: flex; gap: 10px; align-items: center; }
+        .tts-button {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .tts-button:hover { background-color: #0056b3; }
+        .stop-button { background-color: #dc3545; }
+        .stop-button:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h1>G. Gissing: The Private Papers of Henry Ryecroft</h1>
+            <h2>헨리 라이크로프트의 사적인 기록 (ヘンリー・ライクロフトの私記)</h2>
+        </div>
+        <button class="tts-button stop-button" onclick="stopSpeech()">전체 정지</button>
+    </div>
+
+    <!-- 영어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>English</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('en-US', 'text-en')">Listen</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-en">
+            <p>Of late, I have been wishing for music. An odd chance gratified my desire. I had to go into Exeter yesterday. I got there about sunset, transacted my business, and turned to walk home again through the warm twilight. In Southernhay, as I was passing a house of which the groundfloor windows stood open, there sounded the notes of a piano-chords touched by a skilful hand. I checked my step, hoping, and in a minute or two the musician began to play that nocturne of Chopin which I love best- I don't know how to name it. My heart leapt. There I stood in the thickening dusk, the glorious sounds floating about me; and I trembled with very ecstasy of enjoyment.</p>
+        </div>
+    </div>
+
+    <!-- 한국어 섹션 -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>한국어</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ko-KR', 'text-ko')">듣기</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ko">
+            <p>최근 들어, 나는 음악을 갈망해왔다. 뜻밖의 기회가 나의 욕구를 충족시켜 주었다. 나는 어제 엑서터에 가야만 했다. 해질녘쯤 그곳에 도착해서, 내 용무를 처리하고, 따뜻한 황혼을 뚫고 다시 집으로 걸어가려던 참이었다. 서던헤이에서, 1층 창문이 열려 있는 한 집을 지나가고 있을 때, 능숙한 손길이 어루만지는 피아노 화음의 선율이 들려왔다. 나는 희망을 품고 걸음을 멈췄고, 1~2분 뒤 그 연주자는 내가 가장 사랑하는 쇼팽의 야상곡—이름은 모르겠다—을 연주하기 시작했다. 내 심장이 뛰었다. 나는 짙어지는 황혼 속에 서 있었고, 영광스러운 소리가 내 주위를 맴돌았다. 그리고 나는 희열의 황홀경에 몸을 떨었다.</p>
+        </div>
+    </div>
+
+    <!-- 일본어 섹션 (모든 한자에 후리가나 적용) -->
+    <div class="text-section">
+        <div class="lang-label">
+            <span>日本語</span>
+            <div class="controls">
+                <button class="tts-button" onclick="speak('ja-JP', 'text-ja')">聞く</button>
+            </div>
+        </div>
+        <div class="text-content" id="text-ja">
+            <p><ruby>近頃<rt>ちかごろ</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>は<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>切望<rt>せつぼう</rt></ruby>していた。<ruby>思<rt>おも</rt></ruby>いがけない<ruby>偶然<rt>ぐうぜん</rt></ruby>が<ruby>私<rt>わたし</rt></ruby>の<ruby>願<rt>ねが</rt></ruby>いをかなえてくれた。<ruby>私<rt>わたし</rt></ruby>は<ruby>昨日<rt>きのう</rt></ruby>、エクセターに<ruby>行<rt>い</rt></ruby>かなければならなかった。<ruby>日没<rt>にちぼつ</rt></ruby>ごろにそこに<ruby>着<rt>つ</rt></ruby>き、<ruby>用事<rt>ようじ</rt></ruby>を<ruby>済<rt>す</rt></ruby>ませ、<ruby>暖<rt>あたた</rt></ruby>かい<ruby>黄昏<rt>たそがれ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>を<ruby>再<rt>ふたた</rt></ruby>び<ruby>家路<rt>いえじ</rt></ruby>につこうとした。サザンヘイで、<ruby>一階<rt>いっかい</rt></ruby>の<ruby>窓<rt>まど</rt></ruby>が<ruby>開<rt>あ</rt></ruby>いている<ruby>家<rt>いえ</rt></ruby>のそばを<ruby>通<rt>とお</rt></ruby>りかかったとき、<ruby>巧<rt>たく</rt></ruby>みな<ruby>手<rt>て</rt></ruby>によって<ruby>奏<rt>かな</rt></ruby>でられるピアノの<ruby>和音<rt>わおん</rt></ruby>の<ruby>旋律<rt>せんりつ</rt></ruby>が<ruby>聞<rt>き</rt></ruby>こえてきた。<ruby>私<rt>わたし</rt></ruby>は<ruby>期待<rt>きたい</rt></ruby>して<ruby>足<rt>あし</rt></ruby>を<ruby>止<rt>と</rt></ruby>め、<ruby>一<rt>いっ</rt></ruby>、<ruby>二<rt>に</rt></ruby><ruby>分<rt>ふん</rt></ruby>すると、その<ruby>音楽家<rt>おんがくか</rt></ruby>は<ruby>私<rt>わたし</rt></ruby>が<ruby>最<rt>もっと</rt></ruby>も<ruby>愛<rt>あい</rt></ruby>するショパンの<ruby>夜想曲<rt>やそうきょく</rt></ruby>—その<ruby>名<rt>な</rt></ruby>は<ruby>知<rt>し</rt></ruby>らないが—を<ruby>弾<rt>ひ</rt></ruby>き<ruby>始<rt>はじ</rt></ruby>めた。<ruby>私<rt>わたし</rt></ruby>の<ruby>心<rt>こころ</rt></ruby>は<ruby>躍<rt>おど</rt></ruby>った。<ruby>私<rt>わたし</rt></ruby>は<ruby>深<rt>ふか</rt></ruby>まる<ruby>夕闇<rt>ゆうやみ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>に<ruby>立<rt>た</rt></ruby>ち<ruby>尽<rt>つ</rt></ruby>くし、<ruby>輝<rt>かがや</rt></ruby>かしい<ruby>音色<rt>ねいろ</rt></ruby>が<ruby>私<rt>わたし</rt></ruby>の<ruby>周<rt>まわ</rt></ruby>りを<ruby>漂<rt>ただよ</rt></ruby>っていた。そして<ruby>私<rt>わたし</rt></ruby>は、<ruby>享受<rt>きょうじゅ</rt></ruby>の<ruby>歓喜<rt>かんき</rt></ruby>のあまり<ruby>打<rt>う</rt></ruby>ち<ruby>震<rt>ふる</rt></ruby>えた。</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentUtterance = null;
+
+    function speak(lang, elementId) {
+        stopSpeech();
+
+        const originalElement = document.getElementById(elementId);
+        if (!originalElement || !window.speechSynthesis) {
+            alert("음성 합성을 지원하지 않거나 텍스트 요소를 찾을 수 없습니다.");
+            return;
+        }
+        
+        let textToSpeak;
+
+        // 일본어인 경우, 후리가나(rt)를 제거한 텍스트를 생성하여 발음 중복 문제 해결
+        if (lang === 'ja-JP') {
+            const clone = originalElement.cloneNode(true);
+            const furiganaElements = clone.querySelectorAll('rt');
+            furiganaElements.forEach(rt => rt.remove());
+            textToSpeak = clone.innerText;
+        } else {
+            // 다른 언어는 기존 방식 그대로 사용
+            textToSpeak = originalElement.innerText;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.lang = lang;
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onend = function() {
+            currentUtterance = null;
+        };
+
+        currentUtterance = utterance;
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+        if (window.speechSynthesis && window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        if (currentUtterance) {
+            currentUtterance.onend = null;
+            currentUtterance = null;
+        }
+    }
+</script>
+
+</body>
+</html>
